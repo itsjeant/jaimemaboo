@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album</title>
+    <style>
+                * {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+ 
+/* 标题 */
+.header {
+    padding: 50px;
+    text-align: center;
+    background: #d082f5;
+    color: white;
+}
+ 
+/* 标题字体加大 */
+.header h1 {
+    font-size: 30px;
+}
+.header p{font-size: medium;
+margin: 0%;}
+.days{font-size: 25px;color: rgb(252, 216, 14);}
+.navbar {
+            background-color: #e6e2e2;
+            overflow: hidden;
+            justify-content: space-between;
+            display: flex;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 5px;
+            padding: 0;
+            
+        }
+
+        .navbar li {
+            float: left;
+            margin: 0;
+        }
+
+        .navbar li a, .navbar .dropbtn {
+            display: inline-block;
+            color: rgb(241, 151, 222);
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover, .navbar .dropdown:hover .dropbtn {
+            background-color: #979595;
+        }
+
+        /* 下拉菜单样式 */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #706e6e;
+            min-width: 160px;
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #a5a3a3;
+        }
+
+        /* 鼠标悬停时显示下拉菜单 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+ 
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+ 
+        .modules{display: flex;
+            gap: 10px;
+        margin: 10px;}
+        .module-container {
+            width: 40%;
+            
+        }
+        .module-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px;
+            color: purple;
+
+        }
+        .module {
+            background: #f3cefc;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            position: relative;
+        }
+        .module img {
+            width: calc(25% - 5px); /* 让一行最多显示 4 张 */
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .module img:hover{    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+}
+        .more-btn {
+            width: calc(25% - 5px);
+            height: 100px;
+            background: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background 0.3s;
+        }
+        .more-btn:hover {
+            background: #d8b5ff; /* 悬停时变成淡紫色 */
+            transform: translateY(-5px); /* 微微上移 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 5px;
+        }
+        .lightbox button {
+            position: absolute;
+            top: 50%;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        .prev { left: 10%; }
+        .next { right: 10%; }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 25px;
+            color: white;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #d082f5;
+        
+            padding: 20px;
+            text-align: center;
+            
+        }
+
+        .social-icons {background-color: #d082f5;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+           
+            padding: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {transform: scale(1.2);
+        }
+        .social-icons p{font-size: x-small;}
+       
+ 
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+ 
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<div class="header">
+    <h1>Welcome to Booboo Planet!</h1>
+
+    <p>
+        We are together for <div class="days" id="days">0</div>days!
+     </p>
+    
+  </div>
+   
+  <nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="album.html">Album</a></li>
+        <li class="dropdown"><a href="">Art</a>
+            
+            <div class="dropdown-content">
+                <a href="music.html">Music🎶</a> <br>
+               <a href="paints.html"> Paints🎨</a>
+            </div>
+        </li>
+        <li class="dropdown"><a href="">Life</a>
+            <div class="dropdown-content">
+                <a href="recipes.html">Recipes🍳</a> <br>
+                <a href="travel.html"> Travel🧳</a><br>
+
+            </div>
+        </li>
+        <li class="dropdown"><a href="">Beauty</a>
+            
+            <div class="dropdown-content">
+                
+                    <a href="skincares.html"> Skincares🧴</a> <br>
+                 <a href="makeups.html"> Makeups💄</a> 
+            </div>
+        </li>
+    </ul>
+</nav>
+<body>
+<div class="modules">
+    <div class="module-container" data-title="Booboo" data-images="bbfamboos.jpg,babies1.jpg,babies2.jpg,babies6.jpg,babies3.jpg,babies4.jpg,babies5.jpg,babies8.jpg,babies7.jpg,bbfambabies.jpg"></div>
+    <div class="module-container" data-title="Animals" data-images="animals1.jpg,animals10.jpg,animals11.jpg,animals4.jpg,animals5.jpg,animals9.jpg,animals8.jpg,animals6.jpg,animals2.jpg,animals3.jpg,animals7.jpg,animals4.jpg,animals12.jpg,animals13.jpg,animals14.jpg"></div>
+    <div class="module-container" data-title="Little things♥" data-images="1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg, 11.jpg,12.jpg,13.jpg,14.jpg,15.jpg,16.jpg,17.jpg,18.jpg,foodtrip2.jpg"></div>
+
+    <!-- 图片查看器 -->
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()">×</span>
+        <button class="prev" onclick="changeImage(-1)">❮</button>
+        <img id="lightbox-img" src="">
+        <button class="next" onclick="changeImage(1)">❯</button>
+    </div>
+</div>
+    <footer>
+        
+        <div class="social-icons">
+            <a href="https://instagram.com/ta0j1" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            </a >
+            <a href="https://www.tiktok.com/@itsjt.eth" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok">
+            </a >
+            <a href="https://www.snapchat.com" target="_blank">
+                <img src="https://ts2.cn.mm.bing.net/th?id=ODLS.477fa196-97d9-45c2-8412-168d6004d333&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+            </a >
+            <a href="https://www.youtube.com/@Jaimemaboo" target="_blank">
+                <img src="https://ts3.cn.mm.bing.net/th?id=ODLS.ad5102f3-b631-4f61-aef2-1489c911c8dd&w=32&h=32&qlt=91&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+            </a >
+            <a href="mailto:itsjt@outlook.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+            </a >
+            
+            <p>Copyright: Booboo family 2023-forever</p>
+        </div>
+        
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".module-container").forEach(container => {
+                let title = container.getAttribute("data-title");
+                let images = container.getAttribute("data-images").split(",");
+
+                // 创建标题
+                let titleElem = document.createElement("div");
+                titleElem.className = "module-title";
+                titleElem.textContent = title;
+                container.appendChild(titleElem);
+
+                // 创建模块
+                let module = document.createElement("div");
+                module.className = "module";
+                container.appendChild(module);
+
+                let displayedImages = images.slice(0, 8); // 预览 8 张
+                let hiddenImages = images.slice(8); // 多出的部分
+
+                displayedImages.forEach((img, index) => {
+                    let imgElem = document.createElement("img");
+                    imgElem.src = img;
+                    imgElem.onclick = () => openLightbox(images, index);
+                    module.appendChild(imgElem);
+                });
+
+                if (hiddenImages.length > 0) {
+                    let moreBtn = document.createElement("div");
+                    moreBtn.className = "more-btn";
+                    moreBtn.textContent = `+${hiddenImages.length}`;
+                    moreBtn.onclick = () => openLightbox(images, 8); // 从第 9 张开始查看
+                    module.appendChild(moreBtn);
+                }
+            });
+        });
+
+        let currentImages = [];
+        let currentIndex = 0;
+
+        function openLightbox(images, index) {
+            currentImages = images;
+            currentIndex = index;
+            document.getElementById("lightbox-img").src = images[index];
+            document.getElementById("lightbox").style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+        function changeImage(direction) {
+            currentIndex = (currentIndex + direction + currentImages.length) % currentImages.length;
+            document.getElementById("lightbox-img").src = currentImages[currentIndex];
+        }
+
+        document.getElementById("lightbox").addEventListener("click", function (event) {
+            if (event.target === this) {
+                closeLightbox();
+            }
+        });
+                // set up anniversary date
+                const startDate = new Date('2023-04-16'); 
+    
+    // date difference
+    function calculateDays() {
+        const today = new Date();
+        const timeDifference = today - startDate;
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        // show the days
+        document.getElementById('days').innerText = daysDifference;
+    }
+
+    // calculate when loading
+    calculateDays();
+
+    // update everyday（通过定时器模拟）
+    setInterval(() => {
+        const now = new Date();
+        if (now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
+            calculateDays();
+        }
+    }, 1000); // check everysecond
+    </script>
+
+</body>
+</html>
