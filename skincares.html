@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<div class="header">
+    <h1>Welcome to Booboo Planet!</h1>
+
+    <p>
+        We are together for <div class="days" id="days">0</div>days!
+     </p>
+    
+  </div>
+   
+  <nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="album.html">Album</a></li>
+        <li class="dropdown"><a href="">Art</a>
+            
+            <div class="dropdown-content">
+                <a href="music.html">Music🎶</a> <br>
+               <a href="paints.html"> Paints🎨</a>
+            </div>
+        </li>
+        <li class="dropdown"><a href="">Life</a>
+            <div class="dropdown-content">
+                <a href="recipes.html">Recipes🍳</a> <br>
+                <a href="travel.html"> Travel🧳</a><br>
+
+            </div>
+        </li>
+        <li class="dropdown"><a href="">Beauty</a>
+            
+            <div class="dropdown-content">
+                
+                    <a href="skincares.html"> Skincares🧴</a> <br>
+                 <a href="makeups.html"> Makeups💄</a> 
+            </div>
+        </li>
+    </ul>
+</nav>
+<body>
+    <div class="filters">
+       
+        <label for="category">Type</label>
+        <select id="category">
+            <option value="">All types</option>
+            <option value="Cleanser">Cleanser</option>
+            <option value="Toner">Toner</option>
+            <option value="Serum">Serum</option>
+            <option value="Moisturizer">Moisturizer</option>
+            <option value="Sunscreen">Sunscreen</option>
+            <option value="Eye care">Eye care</option>
+            <option value="Ampoule">Ampoule</option>
+            <option value="Essence">Essence</option>
+            <option value="Mask">Mask</option>
+            <option value="Lipmask">Lipmask</option>
+            <option value="Exfoliation">Exfoliation</option>
+        </select>
+    
+        
+        <label for="brand">Brand:</label>
+        <select id="brand">
+            
+            <option value="">All brands</option>
+            <option value="IUNIK">IUNIK</option>
+            <option value="SKIN1004">SKIN1004</option>
+            <option value="COSRX">COSRX</option>
+            <option value="MIXSOON">MIXSOON</option>
+            <option value="Torriden">Torriden</option>
+            <option value="Be Plain">Be Plain</option>
+            <option value="Anua">Anua</option>
+            <option value="AXIS-Y">AXIS-Y</option>
+            <option value="Purito SEOUL">Purito SEOUL</option>
+            <option value="Etude House">Etude House</option>
+            <option value="Beauty of Joseon">Beauty of Joseon</option>
+            <option value="Apieu">Apieu</option>
+            <option value="Coxir">Coxir</option>
+            <option value="Isntree">Isntree</option>
+            <option value="TIAM">TIAM</option>
+            <option value="Benton">Benton</option>
+            <option value="bonajour">bonajour</option>
+            <option value="Benton">Benton</option>
+            <option value="Pyunkang Yul">Pyunkang Yul</option>
+            <option value="Skinfood">Skinfood</option>
+
+       
+        </select>
+    
+        <label for="reaction">Allergic/No Efficience:</label>
+        <select id="reaction">
+            
+            <option value="">All</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+
+        </select>
+    
+    </div>
+
+    <div class="products">
+        <!-- 化妆品列表将通过 JavaScript 动态生成 -->
+    </div>
+
+    <div class="pagination">
+        <button id="prevPage">Previous</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextPage">Next</button>
+    </div>
+</body>
+<footer>
+        
+    <div class="social-icons">
+        <a href="https://instagram.com/ta0j1" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a >
+        <a href="https://www.tiktok.com/@itsjt.eth" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok">
+        </a >
+        <a href="https://www.snapchat.com" target="_blank">
+            <img src="https://ts2.cn.mm.bing.net/th?id=ODLS.477fa196-97d9-45c2-8412-168d6004d333&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+        </a >
+        <a href="https://www.youtube.com/@Jaimemaboo" target="_blank">
+            <img src="https://ts3.cn.mm.bing.net/th?id=ODLS.ad5102f3-b631-4f61-aef2-1489c911c8dd&w=32&h=32&qlt=91&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+        </a >
+        <a href="mailto:itsjt@outlook.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+        </a >
+        
+        <p>Copyright: Booboo family 2023-forever</p>
+    </div>
+    
+</footer>
+</html>
+
+<style>
+         * {
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial;
+    margin: 0;
+}
+ 
+/* 标题 */
+.header {
+    padding: 50px;
+    text-align: center;
+    background: #d082f5;
+    color: white;
+}
+ 
+/* 标题字体加大 */
+.header h1 {
+    font-size: 30px;
+}
+.header p{font-size: medium;
+margin: 0%;}
+.days{font-size: 25px;color: rgb(252, 216, 14);}
+.navbar {
+            background-color: #e6e2e2;
+            overflow: hidden;
+            justify-content: space-between;
+            display: flex;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 5px;
+            padding: 0;
+            
+        }
+
+        .navbar li {
+            float: left;
+            margin: 0;
+        }
+
+        .navbar li a, .navbar .dropbtn {
+            display: inline-block;
+            color: rgb(241, 151, 222);
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover, .navbar .dropdown:hover .dropbtn {
+            background-color: #979595;
+        }
+
+        /* 下拉菜单样式 */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #706e6e;
+            min-width: 160px;
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #a5a3a3;
+        }
+
+        /* 鼠标悬停时显示下拉菜单 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+ 
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+ 
+ body {
+    font-family: Arial, sans-serif;
+    background-color: plum;
+}
+
+.filters {display: flex;
+    margin: 15px;
+}
+
+.filters label {
+    margin-right: 10px;
+    color: rgb(12, 3, 3);
+}
+.filters option{color: rgb(132, 31, 163);}
+
+.products {
+   
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(230, 202, 212);
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 2%;
+    margin: 10px;
+    padding: 10px;
+    width: 800px;
+    height: 450px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+.product h3{font-size: 17px; 
+   }
+
+.product p{font-size: 15px; ;
+display: absolute;}
+/* 分页按钮样式 */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 10%;
+}
+
+.pagination button:hover {
+    background-color: #d78ff8;
+}
+
+/* 产品框悬停效果 */
+.product {
+    border: 1px solid #b32cf1;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px); /* 微微上移 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+.footer {
+            background-color: #d082f5;
+        
+            padding: 20px;
+            text-align: center;
+            
+        }
+
+        .social-icons {background-color: #d082f5;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+           
+            padding: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {transform: scale(1.2);
+        }
+        .social-icons p{font-size: x-small;}
+       
+ 
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+ 
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const products = [
+    { name: 'IUNIK Tea Tree Relief Serum', category: 'Serum', brand: 'IUNIK', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/files/Tea-Tree-Relief-Serum-50ml_PRODUCT_c8d2b6d4-b32d-4390-b07f-aeeacdc62d1d.jpg?v=1685429980', description: 'Good and still using.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/iunik-tea-tree-relief-serum' },
+    { name: 'Calendula Complete Cleansing Oil', category: 'Cleanser', brand: 'IUNIK', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/files/Calendula-Complete-Cleansing-Oil-200ml_SINGLE_8d25534d-7e7f-4551-88fd-a38d4ebff62a.jpg?v=1685450560', description: 'Good and still using.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/iunik-calendula-complete-cleansing-oil' },
+    { name: 'Madagascar Centella Ampoule', category: 'Ampoule', brand: 'SKIN1004', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes2_796823df-6eb7-43c6-a913-9e41a7719415.jpg?v=1701857844', description: 'Good and still using.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/skin1004-madagascar-centella-ampoule?variant=39384520425535' },
+    { name: '7 Rice Ceramide Hydrating Barrier Serum', category: 'Serum', brand: 'Anua', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_b9488f96-78a3-43b0-8b7e-d86f514ea8d6.jpg?v=1722330526', description: 'Good and still using.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/anua-7-rice-ceramide-hydrating-barrier-serum?variant=53014461612381' },
+    { name: 'Cicaful Calming Gel', category: 'Moisturisers', brand: 'Be Plain', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/products/149d4630c92b3afb0a46f2d7ed5f8926_b355cd2f-20c1-4465-be1c-5d04021a9a21.jpg?v=1626093123', description: 'Good and still using.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/be-plain-cicaful-calming-gel?variant=39312246145087' },
+    { name: 'Madagascar Centella Hyalu-Cica Water-Fit Sun Serum', category: 'Sunscreen', brand: 'SKIN1004', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_6dea2526-9036-431a-a217-3974f4d74360.jpg?v=1730120679', description: 'Good and still using.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/skin1004-madagascar-centella-hyalu-cica-water-fit-sun-serum-spf50-pa?variant=39705399066687' },
+    { name: 'Beta Glucan Daily Moisture Cream', category: 'Moisturisers', brand: 'IUNIK', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/files/Beta-Glucan-Power-Moisture-Cream-60ml_SINGLE_cdc4af7b-3a58-4229-a095-fbbb12f3f6ea.jpg?v=1685450236', description: 'Good and still using.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/iunik-beta-glucan-daily-moisture-cream?variant=32017021141055' },
+    { name: 'Artichoke Intensive Skin Barrier Ampoule', category: 'Serum', brand: 'AXIS-Y', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_57be673d-8b06-489e-aa0f-8a8e7a7f94b9.jpg?v=1688721155', description: 'Good and still using.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/artichoke-intensive-skin-barrier-ampoule?variant=39263662866495' },
+    { name: 'Glacier Water Hyaluronic Acid Serum', category: 'Toner', brand: 'MIXSOON', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_d2f5742a-da69-4977-97e8-32f6a034cd4b.jpg?v=1709806569', description: 'Good and still using.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/mixsoon-glacier-water-hyaluronic-acid-serum?variant=50228138508637' },
+    { name: 'Heartleaf Pore Clay Pack', category: 'Exfoliators', brand: 'Anua', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_11032fbc-d493-4dea-9962-f2395763af2c.jpg?v=1716364340', description: 'Allergic.',YesStyle:'',KrSkincare:'' },
+    { name: 'SoonJung pH 6.5 Whip Cleanser', category: 'Cleanser', brand: 'Etude House', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_b02ca5f0-3ffb-402b-8bde-943f812a06ed.jpg?v=1709549038', description: 'Bad reaction.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/etude-house-soon-jung-whip-cleanser?variant=33190157320255' },
+    { name: 'DIVE-IN Low Molecular Hyaluronic Acid Soothing Cream', category: 'Moisturisers', brand: 'Torriden', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_74acb76c-8939-4369-83b0-b3f6818305b5.jpg?v=1697453112', description: 'Good but out of stock on YesStyle.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/torriden-dive-in-low-molecular-hyaluronic-acid-soothing-cream?variant=48866853192029' },
+    { name: 'Centella Cleansing Water', category: 'Cleanser', brand: 'MIXSOON', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_04548838-bdbd-4b57-8e44-4377f06c06b7.jpg?v=1709807211', description: 'Bad Reaction.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/mixsoon-centella-cleansing-water?variant=50228216955229' },
+    { name: 'No.1 Purple Complex Moisture Balancing Soothing Cream', category: 'Cleanser', brand: 'Discontinued', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_dc3fdc98-e329-46b0-9047-86d0419e4792.jpg?v=1701937035', description: 'Good and still using.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/numbuzin-no-1-purple-complex-moisture-balancing-soothing-cream?variant=39996765765695' },
+    { name: 'Wonder Releaf Centella Serum', category: 'Serum', brand: 'Purito SEOUL', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/1_63bd5f2e-2916-453a-9017-d738ddd4ccd2.jpg?v=1710806250', description: 'Bad reaction.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/purito-seoul-wonder-releaf-centella-serum' },
+    { name: 'Relief Sun : Rice + Probiotics', category: 'Sunscreen', brand: 'Beauty of Joseon', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/boj_reliefsun.webp?v=1690402369', description: 'Bad reaction.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/beauty-of-joseon-relief-sun-rice-probiotics?variant=39539910705215' },
+    { name: 'Madecassoside Tetrasome Cica Ampoule', category: 'Serum', brand: 'Apieu', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_44ce14b7-7393-4130-877f-6103c05b848d.jpg?v=1733407839', description: 'Too Expensive(25euros for 50ml), no reaction but no efficience.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/apieu-madecassoside-tetrasome-cica-ampoule?variant=33231736995903' },
+    { name: '', category: '', brand: 'IUNIK', reaction:'No',image: '', description: '',YesStyle:'',KrSkincare:'' },
+    { name: 'Red Bean Water Gel', category: 'Moisturisers', brand: 'Beauty of Joseon', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/800_189fdb00-9335-47b1-8222-224098e3392d.jpg?v=1685458567', description: 'Having bad reaction.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/beauty-of-joseon-red-bean-water-gel?variant=39994845167679' },
+    { name: 'Collagen Brightening Eye Gel Cream', category: 'Eye Care', brand: 'IUNIK', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_6868bbf9-a8a6-46d6-858d-7870e0647b8d.jpg?v=1699452202', description: 'Makes the eyes dry. Already gave to sister',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/tocobo-collagen-brightening-eye-gel-cream?variant=39933167960127' },
+    { name: 'Vita C Bright Toner', category: 'Toner', brand: 'Coxir', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/products/VitaCBrightToner.jpg?v=1628540201', description: 'Reacting bad. We fought bc of this product.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/coxir-vita-c-bright-toner?variant=39419444461631' },
+    { name: 'AHA/BHA Clarifying Treatment Toner', category: 'Toner', brand: 'COSRX', reaction:'No',image: 'https://koreanskincare.nl/cdn/shop/files/019000000004.jpg?v=1701261548', description: 'Perfect, still using it now.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/cosrx-aha-bha-clarifying-treatment-toner?variant=32489877045311' },
+    { name: 'Advanced Snail 96 Mucin Power Essence', category: 'Essence', brand: 'COSRX', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/0190000000092-kopieren.jpg?v=1701261152', description: 'Reacting bad anf allergic.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/cosrx-advanced-snail-96-mucin-power-essence?variant=31507061538879' },
+    { name: 'Hyaluronic Acid Watery Sun Gel SPF50+ PA++++', category: 'Sunscreen', brand: 'Isntree', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/417x840_459d0de2-e298-44da-bbcb-7dbe3fe7d709.jpg?v=1688716056', description: 'The stick if OK but the Gel no.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/hyaluronic-acid-watery-sun-gel-spf50-pa?variant=32821566439487' },
+    { name: 'Dark Spot Correcting Glow Serum', category: 'Serum', brand: 'AXIS-Y', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/axis-y_dark_spot_correcting_glow_serum_k-beautyskin_india_1e463acc-7daf-4317-9668-344522b211e4.jpg?v=1688722517', description: 'Not reaction but not efficient at all',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/axis-y-dark-spot-correcting-glow-serum?variant=39260405989439' },
+    { name: 'Rice Daily Brightening Scrub Foam', category: 'Cleanser', brand: 'Skinfood', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/products/1463_add0.jpg?v=1638723366', description: 'Destroying the skin.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/skinfood-rice-daily-brightening-scrub-foam?variant=39534804500543' },
+    { name: 'AC Fighting AHA BHA PHA Toner', category: 'Toner', brand: 'TIAM', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/products/ACFightingAHABHAPHAToner1.jpg?v=1612598485', description: 'It did not work and make breakouts.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/tiam-ac-fighting-aha-bha-pha-toner?variant=33359060238399' },
+    { name: 'Propolis Serum', category: 'Serum', brand: 'bonajour', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/products/PropolisSerum1.jpg?v=1610251915', description: 'High Risk of Allergic.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/bonajour-propolis-serum?variant=33307334869055' },
+    { name: 'Aloe Propolis Soothing Gel', category: 'Moisturisers', brand: 'Benton', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/products/Aloe_Propolis_Soothing_Gel.jpg?v=1576163942', description: 'Not good.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/benton-aloe-propolis-soothing-gel?variant=31472539697215' },
+    { name: 'Centella Blemish Cream', category: 'Moisturisers', brand: 'COSRX', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/019000000028_84abbbd7-2099-4d7c-95b3-02cada76f451.jpg?v=1686142961', description: 'Not good.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/centella-blemish-cream?variant=32831911034943' },
+    { name: 'Low pH Good Morning Gel Cleanser', category: 'Cleanser', brand: 'COSRX', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/019000000035.jpg?v=1701263078', description: 'Not good.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/cosrx-low-ph-good-morning-gel-cleanser?variant=31322462814271' },
+    { name: 'Full Fit Propolis Light Ampoule', category: 'Serum', brand: 'COSRX', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/019000000176.jpg?v=1701261860', description: 'Not good.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/cosrx-full-fit-propolis-light-ampoule-1?variant=31477625258047' },
+    { name: 'Calming Low pH Foaming Cleanser', category: 'Cleanser', brand: 'Pyunkang Yul', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_8b0ba60d-95ba-47a6-aa0a-a539d736b14f.jpg?v=1685975876', description: 'Not good.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/pyunkang-yul-calming-low-ph-foaming-cleanser?variant=39715749691455' },
+    { name: 'Calming Moisture Repair Balm', category: 'Moisturisers', brand: 'Pyunkang Yul', reaction:'Yes',image: 'https://koreanskincare.nl/cdn/shop/files/Product-page-sizes_de8830a7-d242-47d2-a8b8-e67f9ebbf7d8.jpg?v=1685974261', description: 'Not good.',YesStyle:'',KrSkincare:'https://koreanskincare.nl/products/pyunkang-yul-calming-moisture-repair-balm?variant=39436181536831' },
+];
+
+    const categoryFilter = document.getElementById('category');
+    const brandFilter = document.getElementById('brand');
+    const reactionFilter = document.getElementById('reaction');
+    const productsContainer = document.querySelector('.products');
+    const prevPageButton = document.getElementById('prevPage');
+    const nextPageButton = document.getElementById('nextPage');
+    const pageInfo = document.getElementById('pageInfo');
+    const productImage = document.createElement('img');
+    
+    let currentPage = 1;
+    const productsPerPage = 15;
+
+    // 渲染产品列表
+    function renderProducts() {
+        const selectedCategory = categoryFilter.value;
+        const selectedBrand = brandFilter.value;
+        const selectedReaction = reactionFilter.value;
+        const filteredProducts = products.filter(product => {
+            return (selectedCategory === '' || product.category === selectedCategory) &&
+                   (selectedBrand === '' || product.brand === selectedBrand)&&
+                   (selectedReaction === '' || product.reaction === selectedReaction);
+        });
+
+        // 计算当前页的产品
+        const startIndex = (currentPage - 1) * productsPerPage;
+        const endIndex = startIndex + productsPerPage;
+        const productsToShow = filteredProducts.slice(startIndex, endIndex);
+
+        // 清空容器并渲染产品
+        productsContainer.innerHTML = '';
+        productsToShow.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.className = 'product';
+            productElement.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+                <a href="${product.YesStyle}" target="_blank">Direct to YesStyle</a> <br>
+                <a href="${product.KrSkincare}" target="_blank">Direct to KoreanSkincare</a>
+
+                `;
+
+            productsContainer.appendChild(productElement);
+        });
+
+        // 更新分页信息
+        pageInfo.textContent = `Page ${currentPage}  /  ${Math.ceil(filteredProducts.length / productsPerPage)} Pages`;
+        prevPageButton.disabled = currentPage === 1;
+        nextPageButton.disabled = endIndex >= filteredProducts.length;
+    }
+
+    // 上一页
+    prevPageButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderProducts();
+        }
+    });
+
+    // 下一页
+    nextPageButton.addEventListener('click', () => {
+        const selectedCategory = categoryFilter.value;
+        const selectedBrand = brandFilter.value;
+        const selectedReaction = reactionFilter.value;
+        const filteredProducts = products.filter(product => {
+            return (selectedCategory === '' || product.category === selectedCategory) &&
+                   (selectedBrand === '' || product.brand === selectedBrand)&&
+                   (selectedReaction === '' || product.reaction === selectedReaction);
+        });
+        if (currentPage < Math.ceil(filteredProducts.length / productsPerPage)) {
+            currentPage++;
+            renderProducts();
+        }
+    });
+
+    // 筛选器变化时重置到第一页
+    categoryFilter.addEventListener('change', () => {
+        currentPage = 1;
+        renderProducts();
+    });
+    brandFilter.addEventListener('change', () => {
+        currentPage = 1;
+        renderProducts();
+    });
+    reactionFilter.addEventListener('change', () => {
+        currentPage = 1;
+        renderProducts();
+    });
+
+    //初始渲染
+    renderProducts();
+});
+        // set up anniversary date
+        const startDate = new Date('2023-04-16'); 
+    
+        // date difference
+        function calculateDays() {
+            const today = new Date();
+            const timeDifference = today - startDate;
+            const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    
+            // show the days
+            document.getElementById('days').innerText = daysDifference;
+        }
+    
+        // calculate when loading
+        calculateDays();
+    
+        // update everyday（通过定时器模拟）
+        setInterval(() => {
+            const now = new Date();
+            if (now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
+                calculateDays();
+            }
+        }, 1000); // check everysecond
+</script>
