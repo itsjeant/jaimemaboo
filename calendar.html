@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+ 
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+ 
+/* 标题 */
+.header {
+    padding: 50px;
+    text-align: center;
+    background: #d082f5;
+    color: white;
+}
+ 
+/* 标题字体加大 */
+.header h1 {
+    font-size: 30px;
+}
+.header p{font-size: medium;
+margin: 0%;}
+.days{font-size: 25px;color: rgb(252, 216, 14);}
+.navbar {
+            background-color: #e6e2e2;
+            overflow: hidden;
+            justify-content: space-between;
+            display: flex;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 5px;
+            padding: 0;
+            
+        }
+
+        .navbar li {
+            float: left;
+            margin: 0;
+        }
+
+        .navbar li a, .navbar .dropbtn {
+            display: inline-block;
+            color: rgb(241, 151, 222);
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover, .navbar .dropdown:hover .dropbtn {
+            background-color: #979595;
+        }
+
+        /* 下拉菜单样式 */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #706e6e;
+            min-width: 160px;
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #a5a3a3;
+        }
+
+        /* 鼠标悬停时显示下拉菜单 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+ 
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+ 
+.calendar-text{font-style: italic;}
+
+
+.calendar {
+  background-color: #eacceb;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 650px;
+}
+
+.header-calendar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-calendar button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header-calendar button:hover {
+  background-color: #0056b3;
+}
+
+#month-year {
+  text-align: center;
+  margin: 0;
+}
+
+.day-names, .dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  
+}
+
+.day-names div {
+  text-align: center;
+  font-weight: bold;
+  width: 80px;
+  color: #d082f5;
+  font-size: 19px;
+}
+
+.dates div {
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  color: rgb(226, 18, 226);
+  font-size: 18px;
+}
+
+.dates div:hover {
+  background-color: #e0e0e0;
+}
+
+.dates .marked {
+  background-color: #ffcccb;
+  color: #d9534f;
+  font-weight: bold;
+  max-width: 100px;
+  font-size: 15px;
+}
+
+.dates .marked span {
+  font-size: 0.8em;
+  color: #333;
+  margin-top: 2px;
+}
+
+/* 底部 */
+.footer {
+            background-color: #d082f5;
+        
+            padding: 20px;
+            text-align: center;
+            
+        }
+
+        .social-icons {background-color: #d082f5;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+           
+            padding: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {transform: scale(1.2);
+        }
+        .social-icons p{font-size: x-small;}
+       
+ 
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+ 
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+    </style>
+    <div class="header">
+        <h1>Welcome to Booboo Planet!</h1>
+
+        <p>
+            We are together for <div class="days" id="days">0</div>days!
+         </p>
+        
+      </div>
+       
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="album.html">Album</a></li>
+          <li class="dropdown"><a href="">Art</a>
+              
+              <div class="dropdown-content">
+                  <a href="music.html">Music🎶</a> <br>
+                 <a href="paints.html"> Paints🎨</a>
+              </div>
+          </li>
+          <li class="dropdown"><a href="">Life</a>
+              <div class="dropdown-content">
+                  <a href="recipes.html">Recipes🍳</a> <br>
+                  <a href="travel.html"> Travel🧳</a><br>
+
+              </div>
+          </li>
+          <li class="dropdown"><a href="">Beauty</a>
+              
+              <div class="dropdown-content">
+                  
+                      <a href="skincares.html"> Skincares🧴</a> <br>
+                   <a href="makeups.html"> Makeups💄</a> 
+              </div>
+          </li>
+      </ul>
+    </nav>
+    <body>
+        <div class="calendar-text">Calendar of 2025(Update every year)</div>
+        <div class="calendar">
+            <div class="header-calendar">
+              <button id="prev-month">Last month</button>
+              <h2 id="month-year"></h2>
+              <button id="next-month">Next month</button>
+            </div>
+            <div class="days">
+              <div class="day-names">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+              </div>
+              <div class="dates" id="dates"></div>
+            </div>
+          </div>
+       
+      </body>
+      <footer>
+        
+        <div class="social-icons">
+            <a href="https://instagram.com/ta0j1" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            </a >
+            <a href="https://www.tiktok.com/@itsjt.eth" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok">
+            </a >
+            <a href="https://www.snapchat.com" target="_blank">
+                <img src="https://ts2.cn.mm.bing.net/th?id=ODLS.477fa196-97d9-45c2-8412-168d6004d333&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+            </a >
+            <a href="mailto:itsjt@outlook.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+            </a >
+            
+            <p>Copyright: Booboo family 2023-forever</p>
+        </div>
+        
+    </footer>
+    <script>
+        
+        // set up anniversary date
+        const startDate = new Date('2023-04-16'); 
+    
+        // date difference
+        function calculateDays() {
+            const today = new Date();
+            const timeDifference = today - startDate;
+            const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    
+            // show the days
+            document.getElementById('days').innerText = daysDifference;
+        }
+    
+        // calculate when loading
+        calculateDays();
+    
+        // update everyday（通过定时器模拟）
+        setInterval(() => {
+            const now = new Date();
+            if (now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
+                calculateDays();
+            }
+        }, 1000); // check everysecond
+       
+        
+        document.addEventListener('DOMContentLoaded', function () {
+  const monthYearElement = document.getElementById('month-year');
+  const datesElement = document.getElementById('dates');
+  const prevMonthButton = document.getElementById('prev-month');
+  const nextMonthButton = document.getElementById('next-month');
+
+  let currentDate = new Date(); // 当前日期
+  const endDate = new Date(2025, 11, 31); // 结束日期：2026年12月31日
+
+  // 纪念日数据
+  const memorialDates = [
+    { date: new Date(2025, 1, 14), description: 'Valentines Day' }, // 2025年2月14日
+    { date: new Date(2025, 1, 16), description: '22months' }, 
+    { date: new Date(2025, 2, 16), description: '23months' }, 
+    { date: new Date(2025, 3, 16), description: '2 years' }, 
+    { date: new Date(2025, 4, 16), description: '25months' }, 
+    { date: new Date(2025, 5, 16), description: '26months' }, 
+    { date: new Date(2025, 6, 16), description: '27months' }, 
+    { date: new Date(2025, 7, 16), description: '28months' }, 
+    { date: new Date(2025, 8, 16), description: '29months' }, 
+    { date: new Date(2025, 9, 16), description: '30months' }, 
+    { date: new Date(2025, 10, 16), description: '31months' }, 
+    { date: new Date(2025, 11, 16), description: '32months' }, 
+    { date: new Date(2025, 12, 16), description: '33months' }, 
+    { date: new Date(2025, 8, 11), description: 'Birthday of Boo' }, 
+    { date: new Date(2025, 8, 27), description: 'Birthday of Boo' }, 
+    { date: new Date(2025, 3, 13), description: 'Birthday of Angel' }, 
+    { date: new Date(2025, 8, 10), description: 'Birthday of Lewis' }, 
+    { date: new Date(2025, 5, 7), description: 'Birthday of Maya' }, 
+    { date: new Date(2025, 7, 18), description: 'Birthday of Max/St helena' }, 
+    { date: new Date(2025, 6, 17), description: 'Birthday of Lady sis' }, 
+    { date: new Date(2025, 6, 27), description: 'Birthday of Mom' }, 
+    { date: new Date(2025, 9, 27), description: 'Birthday of Youngersis' }, 
+    { date: new Date(2025, 10, 27), description: 'Birthday of Dad' }, 
+    { date: new Date(2025, 11, 25), description: 'Chirstmas' }, // 2025年12月25日
+  ];
+
+  // 渲染日历
+  function renderCalendar(date) {
+    const month = date.getMonth();
+    const year = date.getFullYear();
+    const firstDayOfMonth = new Date(year, month, 1);
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const startingDay = firstDayOfMonth.getDay();
+
+    monthYearElement.textContent = `${month + 1}/${year} `;
+
+    datesElement.innerHTML = '';
+
+    // 填充空白
+    for (let i = 0; i < startingDay; i++) {
+      datesElement.innerHTML += '<div></div>';
+    }
+
+    // 填充日期
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dateCell = new Date(year, month, day);
+      const dateElement = document.createElement('div');
+      dateElement.textContent = day;
+
+      // 检查是否是纪念日
+      const memorial = memorialDates.find(m => m.date.toDateString() === dateCell.toDateString());
+      if (memorial) {
+        dateElement.classList.add('marked');
+        const description = document.createElement('span');
+        description.textContent = memorial.description;
+        dateElement.appendChild(description);
+      }
+
+      datesElement.appendChild(dateElement);
+    }
+  }
+
+  // 更新按钮状态
+  function updateButtons() {
+    prevMonthButton.disabled = currentDate <= new Date(); // 不能早于当前月份
+    nextMonthButton.disabled = currentDate >= endDate; // 不能晚于2026年12月
+  }
+
+  // 上一月
+  prevMonthButton.addEventListener('click', () => {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    renderCalendar(currentDate);
+    updateButtons();
+  });
+
+  // 下一月
+  nextMonthButton.addEventListener('click', () => {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    renderCalendar(currentDate);
+    updateButtons();
+  });
+
+  // 初始化日历
+  renderCalendar(currentDate);
+  updateButtons();
+}); 
+    </script>
+</html>
