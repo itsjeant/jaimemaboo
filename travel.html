@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    
+    <div class="header">
+        <h1>Welcome to Booboo Planet!</h1>
+
+        <p>
+            We are together for <div class="days" id="days">0</div>days!
+         </p>
+        
+      </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="album.html">Album</a></li>
+            <li class="dropdown"><a href="">Art</a>
+                
+                <div class="dropdown-content">
+                    <a href="music.html">Music🎶</a> <br>
+                   <a href="paints.html"> Paints🎨</a>
+                </div>
+            </li>
+            <li class="dropdown"><a href="">Life</a>
+                <div class="dropdown-content">
+                    <a href="recipes.html">Recipes🍳</a> <br>
+                    <a href="travel.html"> Travel🧳</a><br>
+
+                </div>
+            </li>
+            <li class="dropdown"><a href="">Beauty</a>
+                
+                <div class="dropdown-content">
+                    
+                        <a href="skincares.html"> Skincares🧴</a> <br>
+                     <a href="makeups.html"> Makeups💄</a> 
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <body>
+<div class="main">
+        <div id="sidenav">
+            <ul>
+                <li onclick="showRecipe(0)">Disneyland🏰✨</li>
+                <li onclick="showRecipe(1)">Santorini💙🌅</li>
+                <li onclick="showRecipe(2)">Italy⛪</li>
+                <li onclick="showRecipe(3)">Hawaii🏖️🌺</li>
+                <li onclick="showRecipe(4)">Iceland🌌❄️</li>
+            </ul>
+        </div>
+    
+        <div id="content">
+            <div class="recipe active">
+                <h1>Disneyland</h1>
+                <img src="disney.jfif" alt="disney">
+                <div class="intro">
+                    <h2>Introduction :</h2>
+                    <p>Disneyland Paris, situé à Marne-la-Vallée à environ 32 km de Paris, est l'une des destinations touristiques les plus populaires d'Europe. La distance entre Disneyland Paris et Tournai est d'environ 230 kilomètres. En voiture, cela prend généralement environ 2 heures et 30 minutes, selon les conditions de circulation. Ouvert en 1992, ce parc à thème magique propose une expérience immersive dans l'univers des films Disney, avec des attractions, des spectacles et des rencontres avec des personnages emblématiques, dont le célèbre <strong>Stitch</strong>.</p >
+                </div>
+            
+                <div class="activities">
+                    <h2>Que faire à Disneyland Paris ?</h2>
+                    <h3>1. Parc Disneyland :</h3>
+                    <ul>
+                        <li><strong>Sleeping Beauty Castle</strong> : Le château emblématique de la Belle au Bois Dormant, parfait pour des photos souvenirs.</li>
+                        <li><strong>Pirates of the Caribbean</strong> : Une attraction immersive dans l'univers des pirates.</li>
+                        <li><strong>Space Mountain: Mission 2</strong> : Un roller coaster palpitant dans l'espace.</li>
+                        <li><strong>It's a Small World</strong> : Une croisière enchantée à travers les cultures du monde.</li>
+                    </ul>
+            
+                    <h3>2. Parc Walt Disney Studios :</h3>
+                    <ul>
+                        <li><strong>Ratatouille: The Adventure</strong> : Une attraction 4D inspirée du film <i>Ratatouille</i>.</li>
+                        <li><strong>Tower of Terror</strong> : Une chute libre effrayante dans un hôtel hanté.</li>
+                        <li><strong>Crush's Coaster</strong> : Un roller coaster inspiré du film <i>Le Monde de Nemo</i>.</li>
+                    </ul>
+            
+                    <h3>3. Spectacles et parades :</h3>
+                    <ul>
+                        <li><strong>Disney Illuminations</strong> : Un spectacle nocturne de feux d'artifice et de projections sur le château.</li>
+                        <li><strong>Disney Stars on Parade</strong> : Une parade colorée avec tous vos personnages Disney préférés.</li>
+                    </ul>
+            
+                    <h3>4. Rencontrez Stitch :</h3>
+                    <ul>
+                        <li><strong>Stitch Live!</strong> : Une attraction interactive où vous pouvez rencontrer Stitch en personne. Il interagit avec le public en temps réel grâce à une technologie innovante.</li>
+                        <li><strong>Points de rencontre</strong> : Stitch apparaît également lors de certaines parades et événements spéciaux. Consultez le programme du jour pour savoir où et quand le rencontrer.</li>
+                        <li><strong>Boutiques</strong> : Ne manquez pas les boutiques pour acheter des souvenirs à l'effigie de Stitch, comme des peluches, des t-shirts et des accessoires.</li>
+                    </ul>
+                    <img src="stitch.jfif" alt="stitch">
+                    <img src="stitchlive.jfif" alt="stitchlive">
+                </div>
+            
+                <div class="tips">
+                    <h2>Conseils pratiques :</h2>
+                    <h3>1. Billets et réservations :</h3>
+                    <ul>
+                        <li>Achetez vos billets en ligne à l'avance pour éviter les files d'attente.</li>
+                        <li>Optez pour un billet multi-jours si vous souhaitez explorer les deux parcs.</li>
+                    </ul>
+            
+                    <h3>2. Meilleure période pour visiter :</h3>
+                    <ul>
+                        <li>Évitez les vacances scolaires et les week-ends pour des foules moins importantes.</li>
+                        <li>Printemps et automne sont des périodes idéales pour un temps agréable.</li>
+                    </ul>
+            
+                    <h3>3. Sur place :</h3>
+                    <ul>
+                        <li>Arrivez tôt pour profiter des attractions populaires sans trop attendre.</li>
+                        <li>Utilisez l'application Disneyland Paris pour vérifier les temps d'attente et planifier votre journée.</li>
+                        <li>Prévoyez des vêtements confortables et des chaussures adaptées à la marche.</li>
+                    </ul>
+            
+                    <h3>4. Hébergement :</h3>
+                    <ul>
+                        <li>Les hôtels Disney offrent des avantages comme un accès early entry au parc.</li>
+                        <li>Des options moins chères sont disponibles à proximité du parc.</li>
+                    </ul>
+                </div>
+            
+                <div class="tip">
+                    <h2>À ne pas manquer pour les fans de Stitch :</h2>
+                    <ul>
+                        <li>Assistez à <strong>Stitch Live!</strong> pour une expérience interactive unique.</li>
+                        <li>Prenez des photos avec Stitch lors des points de rencontre.</li>
+                        <li>Rendez-vous dans les boutiques pour ramener des souvenirs exclusifs de Stitch.</li>
+                        <li>Gardez un œil sur le programme des événements spéciaux, car Stitch peut apparaître lors de certaines célébrations.</li>
+                    </ul>
+                </div>
+                    
+
+            </div>
+            <div class="recipe">
+                <h1>Santorini</h1>
+                <img src="santorini.jfif" alt="Santorini">
+                <div class="intro">
+                    <h2>Introduction :</h2>
+                    <p>Santorini, une île grecque emblématique de la mer Égée, est une destination de rêve pour les couples. Avec ses villages blancs perchés sur des falaises, ses couchers de soleil spectaculaires et ses plages uniques, Santorin offre une escapade romantique inoubliable. Depuis la Belgique, l'île est facilement accessible en avion avec une escale à Athènes ou directement en haute saison.</p >
+                </div>
+            
+                <div class="activities">
+                    <h2>Que faire à Santorin ?</h2>
+                    <h3>1. Explorer les villages emblématiques :</h3>
+                    <ul>
+                        <li><strong>Oia</strong> : Le village le plus célèbre de Santorin, connu pour ses ruelles pittoresques et ses couchers de soleil à couper le souffle. Parfait pour une promenade romantique.</li>
+                        <li><strong>Fira</strong> : La capitale animée de l'île, avec ses boutiques, ses restaurants et une vue imprenable sur la caldeira.</li>
+                        <li><strong>Imerovigli</strong> : Un village plus calme, idéal pour les couples cherchant la tranquillité et des vues spectaculaires.</li>
+                    </ul>
+            
+                    <h3>2. Profiter des plages uniques :</h3>
+                    <ul>
+                        <li><strong>Plage de Perissa</strong> : Une plage de sable noir volcanique, parfaite pour se détendre.</li>
+                        <li><strong>Plage de Red Beach</strong> : Connue pour ses falaises rouges spectaculaires, c'est un endroit idéal pour des photos romantiques.</li>
+                        <li><strong>Plage de Kamari</strong> : Une plage animée avec des restaurants en bord de mer et des activités nautiques.</li>
+                    </ul>
+            
+                    <h3>3. Vivre des expériences romantiques :</h3>
+                    <ul>
+                        <li><strong>Coucher de soleil à Oia</strong> : Un moment magique à ne pas manquer, surtout depuis le château d'Oia.</li>
+                        <li><strong>Cruise en bateau</strong> : Profitez d'une croisière autour de la caldeira avec un dîner romantique au coucher du soleil.</li>
+                        <li><strong>Dégustation de vins</strong> : Santorin est réputée pour ses vignobles. Visitez une cave locale pour une dégustation de vins en couple.</li>
+                    </ul>
+            
+                    <h3>4. Découvrir la culture et l'histoire :</h3>
+                    <ul>
+                        <li><strong>Site archéologique d'Akrotiri</strong> : Une ancienne ville minoenne ensevelie sous les cendres volcaniques.</li>
+                        <li><strong>Musée préhistorique de Thira</strong> : Pour en apprendre davantage sur l'histoire fascinante de l'île.</li>
+                    </ul>
+                </div>
+            
+                <div class="tips">
+                    <h2>Conseils pratiques :</h2>
+                    <h3>1. Depuis la Belgique :</h3>
+                    <ul>
+                        <li>Vols directs vers Santorin sont disponibles en haute saison (avril à octobre) depuis Bruxelles. Sinon, prenez un vol avec escale à Athènes.</li>
+                        <li>Réservez vos billets à l'avance pour obtenir les meilleurs tarifs.</li>
+                    </ul>
+            
+                    <h3>2. Meilleure période pour visiter :</h3>
+                    <ul>
+                        <li>Mai à septembre est la meilleure période pour profiter du beau temps et des activités en plein air.</li>
+                        <li>Évitez juillet et août si vous préférez éviter les foules.</li>
+                    </ul>
+            
+                    <h3>3. Hébergement :</h3>
+                    <ul>
+                        <li>Optez pour un hôtel avec vue sur la caldeira pour une expérience romantique inoubliable.</li>
+                        <li>Les suites avec piscine privée sont très populaires parmi les couples.</li>
+                    </ul>
+            
+                    <h3>4. Sur place :</h3>
+                    <ul>
+                        <li>Louez une voiture pour explorer l'île à votre rythme.</li>
+                        <li>Prévoyez des vêtements légers pour la journée et une veste légère pour les soirées fraîches.</li>
+                    </ul>
+                </div>
+            
+                <div class="tip">
+                    <h2>À ne pas manquer pour les couples :</h2>
+                    <ul>
+                        <li>Dînez dans un restaurant romantique avec vue sur la caldeira.</li>
+                        <li>Offrez-vous une séance photo professionnelle dans les ruelles d'Oia.</li>
+                        <li>Profitez d'un spa en couple dans l'un des nombreux hôtels de luxe de l'île.</li>
+                    </ul>
+                </div>
+            
+            </div>
+            <div class="recipe">
+                <h1>Italy</h1>
+                <img src="florence.jfif" alt="florence">
+                <div class="intro">
+                    <h2>Introduction :</h2>
+                    <p>Florence, berceau de la Renaissance, est une ville italienne riche en histoire, en art et en culture catholique. En plus de Florence, l'Italie abrite de nombreux sites religieux importants, comme le Vatican à Rome et la Basilique Saint-François à Assise. Ce guide vous propose de découvrir les trésors de Florence ainsi que d'autres lieux emblématiques de la culture catholique en Italie.</p >
+                </div>
+            
+                <div class="activities">
+                    <h2>Que faire à Florence ?</h2>
+                    <h3>1. Découvrir les monuments religieux :</h3>
+                    <ul>
+                        <li><strong>Cathédrale Santa Maria del Fiore (Duomo)</strong> : Le symbole de Florence, avec son dôme emblématique conçu par Brunelleschi. Montez au sommet pour une vue panoramique sur la ville.</li>
+                        <li><strong>Basilique Santa Croce</strong> : Une église gothique abritant les tombes de grands noms comme Michel-Ange et Galilée.</li>
+                        <li><strong>Basilique San Lorenzo</strong> : L'une des plus anciennes églises de Florence, avec des chapelles conçues par Michel-Ange.</li>
+                    </ul>
+            
+                    <h3>2. Explorer les musées et l'art religieux :</h3>
+                    <ul>
+                        <li><strong>Galerie des Offices</strong> : Découvrez des chefs-d'œuvre religieux de Botticelli, Léonard de Vinci et Michel-Ange.</li>
+                        <li><strong>Musée de l'Œuvre du Duomo</strong> : Consacré à l'art religieux, il abrite des sculptures et des artefacts de la cathédrale.</li>
+                    </ul>
+            
+                    <h3>3. Profiter des expériences spirituelles :</h3>
+                    <ul>
+                        <li><strong>Assister à une messe</strong> : Participez à une messe dans l'une des églises historiques de Florence pour une expérience spirituelle authentique.</li>
+                        <li><strong>Visiter les cloîtres</strong> : Explorez les cloîtres paisibles de la Basilique Santa Maria Novella ou de la Basilique San Miniato al Monte.</li>
+                    </ul>
+            
+                    <h3>4. Découvrir les environs de Florence :</h3>
+                    <ul>
+                        <li><strong>Fiesole</strong> : Une petite ville proche de Florence avec des ruines romaines et une vue imprenable sur la vallée.</li>
+                        <li><strong>San Gimignano</strong> : Un village médiéval célèbre pour ses tours et son ambiance historique.</li>
+                    </ul>
+                </div>
+            
+                <div class="activities">
+                    <h2>Autres lieux de culture catholique en Italie :</h2>
+                    <h3>1. Rome :</h3>
+                    <ul>
+                        <li><strong>Vatican</strong> : Visitez la Basilique Saint-Pierre, la Chapelle Sixtine et les Musées du Vatican pour une immersion dans l'histoire catholique.</li>
+                        <li><strong>Basilique Saint-Paul-hors-les-Murs</strong> : L'une des quatre basiliques majeures de Rome.</li>
+                    </ul>
+            
+                    <h3>2. Assise :</h3>
+                    <ul>
+                        <li><strong>Basilique Saint-François</strong> : Un lieu de pèlerinage important dédié à Saint François d'Assise, avec des fresques de Giotto.</li>
+                    </ul>
+            
+                    <h3>3. Padoue :</h3>
+                    <ul>
+                        <li><strong>Basilique Saint-Antoine</strong> : Un sanctuaire dédié à Saint Antoine de Padoue, très vénéré par les catholiques.</li>
+                    </ul>
+            
+                    <h3>4. Sienne :</h3>
+                    <ul>
+                        <li><strong>Cathédrale de Sienne</strong> : Une église gothique impressionnante avec des œuvres d'art religieux de premier plan.</li>
+                    </ul>
+                </div>
+            
+                <div class="tips">
+                    <h2>Conseils pratiques :</h2>
+                    <h3>1. Transport :</h3>
+                    <ul>
+                        <li>Florence est facilement accessible en train depuis les grandes villes italiennes comme Rome, Milan et Venise.</li>
+                        <li>Pour visiter les autres sites religieux, louez une voiture ou utilisez les trains régionaux.</li>
+                    </ul>
+            
+                    <h3>2. Meilleure période pour visiter :</h3>
+                    <ul>
+                        <li>Le printemps (avril à juin) et l'automne (septembre à octobre) sont les meilleures périodes pour éviter les foules et profiter d'un temps agréable.</li>
+                    </ul>
+            
+                    <h3>3. Hébergement :</h3>
+                    <ul>
+                        <li>À Florence, choisissez un hôtel près du centre historique pour être proche des sites religieux et culturels.</li>
+                        <li>Dans les autres villes, optez pour des hébergements proches des basiliques ou des lieux de pèlerinage.</li>
+                    </ul>
+            
+                    <h3>4. Sur place :</h3>
+                    <ul>
+                        <li>Portez des vêtements appropriés pour visiter les églises (épaules couvertes et jambes couvertes).</li>
+                        <li>Réservez vos billets pour les sites populaires à l'avance, surtout pour le Vatican et la Chapelle Sixtine.</li>
+                    </ul>
+                </div>
+            
+                <div class="tip">
+                    <h2>À ne pas manquer :</h2>
+                    <ul>
+                        <li>Participez à une visite guidée des sites religieux pour en apprendre davantage sur leur histoire et leur signification.</li>
+                        <li>Goûtez à la cuisine italienne traditionnelle dans les trattorias locales.</li>
+                        <li>Assistez à une messe papale si vous visitez le Vatican.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="recipe">
+                <h1>Hawaii</h1>
+                <img src="honululu.jfif" alt="honululu">
+                <div class="intro">
+                    <h2>Introduction :</h2>
+                    <p>Hawaï, un archipel paradisiaque dans l'océan Pacifique, est une destination de rêve pour les amoureux de la nature, des plages et des aventures. En plus de ses paysages époustouflants, Hawaï est également lié à <strong>Stitch</strong> , le célèbre personnage de Disney originaire de l'espace mais adopté par la culture hawaïenne. Ce guide vous propose de découvrir les meilleures plages de Hawaï ainsi que des expériences uniques autour de Stitch.</p >
+                </div>
+            
+                <div class="activities">
+                    <h2>Que faire à Hawaï ?</h2>
+                    <h3>1. Rencontrez Stitch  :</h3>
+                    <ul>
+                        <li><strong>Aulani, un Disney Resort & Spa</strong> : Situé sur l'île d'Oahu, ce complexe hôtelier Disney propose des expériences magiques avec Stitch. Participez à des activités interactives, des spectacles et des rencontres avec le personnage.</li>
+                        <li><strong>Stitch's Aloha Breakfast</strong> : Profitez d'un petit-déjeuner en compagnie de Stitch et d'autres personnages Disney à l'Aulani Resort.</li>
+                        <li><strong>Boutiques Disney</strong> : Trouvez des souvenirs exclusifs de Stitch, comme des peluches, des vêtements et des accessoires, dans les boutiques de l'Aulani Resort.</li>
+                    </ul>
+                    <img src="hawaii.jfif" alt="hawaii">
+                    <img src="hawaii1.jfif" alt="hawaii1">
+            
+                    <h3>2. Découvrez les plages emblématiques :</h3>
+                    <ul>
+                        <li><strong>Waikiki Beach (Oahu)</strong> : Une plage célèbre pour ses vagues douces, idéale pour le surf débutant et les bains de soleil.</li>
+                        <li><strong>Kaanapali Beach (Maui)</strong> : Une plage de sable doré avec des eaux cristallines, parfaite pour la plongée avec tuba.</li>
+                        <li><strong>Poipu Beach (Kauai)</strong> : Connue pour ses paysages spectaculaires et ses tortues marines.</li>
+                        <li><strong>Hapuna Beach (Big Island)</strong> : L'une des plus grandes plages de sable blanc d'Hawaï, idéale pour la baignade et le surf.</li>
+                    </ul>
+            
+                    <h3>3. Activités nautiques et aventures :</h3>
+                    <ul>
+                        <li><strong>Surf</strong> : Prenez des cours de surf à Waikiki ou sur les plages de North Shore.</li>
+                        <li><strong>Plongée avec tuba</strong> : Explorez les récifs coralliens et la vie marine à Hanauma Bay (Oahu) ou Molokini (Maui).</li>
+                        <li><strong>Excursions en bateau</strong> : Partez en croisière pour observer les baleines (en hiver) ou profiter d'un coucher de soleil romantique.</li>
+                    </ul>
+            
+                    <h3>4. Explorez la culture hawaïenne :</h3>
+                    <ul>
+                        <li><strong>Luau</strong> : Assistez à un festin traditionnel hawaïen avec des danses, de la musique et des plats locaux.</li>
+                        <li><strong>Visitez un volcan</strong> : Découvrez le parc national des volcans d'Hawaï sur Big Island pour voir des coulées de lave actives.</li>
+                        <li><strong>Marchés locaux</strong> : Explorez les marchés pour acheter des produits artisanaux et des souvenirs uniques.</li>
+                    </ul>
+                </div>
+            
+                <div class="tips">
+                    <h2>Conseils pratiques :</h2>
+                    <h3>1. Transport :</h3>
+                    <ul>
+                        <li>Louez une voiture pour explorer les différentes îles à votre rythme.</li>
+                        <li>Des vols inter-îles sont disponibles pour passer d'une île à l'autre facilement.</li>
+                    </ul>
+            
+                    <h3>2. Meilleure période pour visiter :</h3>
+                    <ul>
+                        <li>Avril à octobre est la meilleure période pour profiter du beau temps et des activités en plein air.</li>
+                        <li>Évitez décembre et janvier si vous préférez éviter les foules et les prix élevés.</li>
+                    </ul>
+            
+                    <h3>3. Hébergement :</h3>
+                    <ul>
+                        <li>Optez pour un hôtel en bord de plage pour un accès facile aux activités nautiques.</li>
+                        <li>L'Aulani Resort est un excellent choix pour les fans de Disney et de Stitch.</li>
+                    </ul>
+            
+                    <h3>4. Sur place :</h3>
+                    <ul>
+                        <li>Apportez de la crème solaire, un chapeau et des vêtements légers pour vous protéger du soleil.</li>
+                        <li>Respectez l'environnement en évitant de toucher les coraux ou de déranger la faune marine.</li>
+                    </ul>
+                </div>
+            
+                <div class="tip">
+                    <h2>À ne pas manquer pour les fans de Stitch :</h2>
+                    <ul>
+                        <li>Participez à <strong>Stitch's Aloha Breakfast</strong> pour une expérience interactive avec le personnage.</li>
+                        <li>Prenez des photos avec Stitch lors des rencontres organisées à l'Aulani Resort.</li>
+                        <li>Rendez-vous dans les boutiques Disney pour ramener des souvenirs exclusifs de Stitch.</li>
+                    </ul>
+                </div>         
+            </div>
+            <div class="recipe">
+                <h1>Iceland</h1>
+                <img src="iceland.jfif" alt="iceland">
+                <div class="intro">
+                    <h2>Introduction :</h2>
+                    <p>L'Islande, une île nordique située entre l'Europe et l'Amérique du Nord, est une destination unique pour les amoureux de la nature et des phénomènes naturels spectaculaires. L'une des expériences les plus magiques que l'on puisse vivre en Islande est l'observation des <strong>aurores boréales</strong> (Aurora Borealis). Ce guide vous propose de découvrir les meilleurs endroits pour observer les aurores boréales ainsi que d'autres activités incontournables en Islande.</p >
+                </div>
+            
+                <div class="activities">
+                    <h2>Que faire en Islande ?</h2>
+                    <h3>1. Observer les aurores boréales :</h3>
+                    <ul>
+                        <li><strong>Meilleure période</strong> : Les aurores boréales sont visibles de septembre à mars, lorsque les nuits sont les plus longues et le ciel le plus clair.</li>
+                        <li><strong>Meilleurs endroits</strong> :
+                            <ul>
+                                <li><strong>Reykjavik</strong> : La capitale offre des points d'observation comme le parc Öskjuhlíð.</li>
+                                <li><strong>Campagne islandaise</strong> : Les zones rurales, comme Thingvellir ou la péninsule de Snæfellsnes, offrent un ciel plus sombre et une meilleure visibilité.</li>
+                                <li><strong>Lac Mývatn</strong> : Un endroit isolé avec peu de pollution lumineuse, idéal pour les aurores.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Excursions organisées</strong> : Réservez une excursion en bus ou en jeep pour maximiser vos chances de voir les aurores.</li>
+                    </ul>
+            
+                    <h3>2. Explorer les paysages naturels :</h3>
+                    <ul>
+                        <li><strong>Cercle d'or</strong> : Découvrez le parc national de Thingvellir, la chute d'eau de Gullfoss et le site géothermique de Geysir.</li>
+                        <li><strong>Côte sud</strong> : Visitez les chutes d'eau de Seljalandsfoss et Skógafoss, ainsi que la plage de sable noir de Reynisfjara.</li>
+                        <li><strong>Jökulsárlón</strong> : Un lagon glaciaire spectaculaire avec des icebergs flottants.</li>
+                    </ul>
+            
+                    <h3>3. Profiter des sources chaudes :</h3>
+                    <ul>
+                        <li><strong>Blue Lagoon</strong> : Le spa géothermique le plus célèbre d'Islande, parfait pour se détendre.</li>
+                        <li><strong>Mývatn Nature Baths</strong> : Une alternative moins fréquentée au Blue Lagoon, avec des vues magnifiques.</li>
+                    </ul>
+            
+                    <h3>4. Découvrir la culture islandaise :</h3>
+                    <ul>
+                        <li><strong>Reykjavik</strong> : Explorez la capitale avec ses musées, ses restaurants et son architecture unique.</li>
+                        <li><strong>Festivals</strong> : Participez à des événements culturels comme le festival des lumières en hiver.</li>
+                    </ul>
+                </div>
+            
+                <div class="tips">
+                    <h2>Conseils pratiques :</h2>
+                    <h3>1. Transport :</h3>
+                    <ul>
+                        <li>Louez une voiture pour explorer l'île à votre rythme. Les routes principales sont bien entretenues, mais soyez prudent en hiver.</li>
+                        <li>Des bus et des excursions organisées sont également disponibles pour les principales attractions.</li>
+                    </ul>
+            
+                    <h3>2. Meilleure période pour visiter :</h3>
+                    <ul>
+                        <li>Pour les aurores boréales, visitez entre septembre et mars.</li>
+                        <li>Pour des conditions météorologiques plus clémentes, l'été (juin à août) est idéal.</li>
+                    </ul>
+            
+                    <h3>3. Hébergement :</h3>
+                    <ul>
+                        <li>Optez pour des hôtels ou des guesthouses dans les zones rurales pour maximiser vos chances de voir les aurores.</li>
+                        <li>À Reykjavik, choisissez un hôtel avec une vue dégagée sur le ciel.</li>
+                    </ul>
+            
+                    <h3>4. Sur place :</h3>
+                    <ul>
+                        <li>Habillez-vous chaudement, surtout en hiver, avec des couches thermiques et des vêtements imperméables.</li>
+                        <li>Utilisez des applications comme "Aurora Forecast" pour suivre les prévisions d'aurores boréales.</li>
+                    </ul>
+                </div>
+            
+                <div class="tip">
+                    <h2>À ne pas manquer :</h2>
+                    <ul>
+                        <li>Participez à une excursion nocturne pour observer les aurores boréales avec un guide expérimenté.</li>
+                        <li>Prenez des photos des aurores avec un trépied et un appareil photo réglé sur une longue exposition.</li>
+                        <li>Profitez des sources chaudes pour vous réchauffer après une nuit d'observation.</li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+    </div>
+    </body>
+    <footer>
+        
+        <div class="social-icons">
+            <a href="https://instagram.com/ta0j1" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            </a >
+            <a href="https://www.tiktok.com/@itsjt.eth" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok">
+            </a >
+            <a href="https://www.snapchat.com" target="_blank">
+                <img src="https://ts2.cn.mm.bing.net/th?id=ODLS.477fa196-97d9-45c2-8412-168d6004d333&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+            </a >
+            <a href="https://www.youtube.com/@Jaimemaboo" target="_blank">
+                <img src="https://ts3.cn.mm.bing.net/th?id=ODLS.ad5102f3-b631-4f61-aef2-1489c911c8dd&w=32&h=32&qlt=91&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+            </a >
+            <a href="mailto:itsjt@outlook.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+            </a >
+            
+            <p>Copyright: Booboo family 2023-forever</p>
+        </div>
+        
+    </footer>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+
+        #sidenav {
+            width: 200px;
+            
+            background-color: rgb(218, 219, 219);
+            padding: 10px;
+            border-right: 2px solid #ccc;
+        }
+
+        #sidenav ul {
+            list-style: none;
+            font-style: initial;
+        }
+
+        #sidenav ul li {
+            margin: 5px 0;
+            cursor: pointer;
+            line-height: 2;
+        }
+        #sidenav ul li:hover{
+            background-color: #d082f5;
+        }
+        #content {
+            flex: 1;
+            padding: 20px;
+      background-color: #b4edf5;
+        }
+
+        .recipe {
+            display: none;
+            ;
+        }
+
+        .recipe.active {
+            display: block;
+            
+        }
+        .recipe.active img{width: 100px;}
+        h1{color: purple;}
+        h2 {
+            color: #d32f2f;
+        }
+        
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+            
+        }
+        .intro, .activities, .tips {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .tip {
+            background-color: #fff3e0;
+            padding: 10px;
+            border-left: 4px solid #ffa726;
+            margin: 20px 0;
+        }
+        .header {
+    padding: 50px;
+    text-align: center;
+    background: #d082f5;
+    color: white;
+}
+ 
+/* 标题字体加大 */
+.header h1 {
+    font-size: 30px;
+    color: #fff;
+}
+.header p{font-size: medium;
+margin: 0%;}
+
+.days{font-size: 25px;color: rgb(252, 216, 14);}
+
+.navbar {
+            background-color: #e6e2e2;
+            overflow: hidden;
+            justify-content: space-between;
+            display: flex;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 5px;
+            padding: 0;
+            
+        }
+
+        .navbar li {
+            float: left;
+            margin: 0;
+        }
+
+        .navbar li a, .navbar .dropbtn {
+            display: inline-block;
+            color: rgb(241, 151, 222);
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover, .navbar .dropdown:hover .dropbtn {
+            background-color: #979595;
+        }
+
+        /* 下拉菜单样式 */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #706e6e;
+            min-width: 160px;
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #a5a3a3;
+        }
+
+        /* 鼠标悬停时显示下拉菜单 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+ 
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+ 
+ 
+body{
+    margin: 0;
+    padding: 0;
+}
+.main{display: flex;}
+/* 底部 */
+.footer {
+            background-color: #d082f5;
+        
+            padding: 20px;
+            text-align: center;
+            
+        }
+
+        .social-icons {background-color: #d082f5;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+           
+            padding: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {transform: scale(1.2);
+        }
+        .social-icons p{font-size: x-small;}
+       
+ 
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+ 
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+    </style>
+</head>
+
+    <script>
+        // 默认显示第一个菜谱
+        function showRecipe(index) {
+            // 获取所有的菜谱
+            const recipes = document.querySelectorAll('.recipe');
+            
+            // 隐藏所有菜谱
+            recipes.forEach(function(recipe) {
+                recipe.classList.remove('active');
+            });
+            
+            // 显示选中的菜谱
+            recipes[index].classList.add('active');
+        }
+
+        // 打开页面时默认显示第一个菜谱
+        window.onload = function() {
+            showRecipe(0);
+        }
+        // set up anniversary date
+        const startDate = new Date('2023-04-16'); 
+    
+        // date difference
+        function calculateDays() {
+            const today = new Date();
+            const timeDifference = today - startDate;
+            const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    
+            // show the days
+            document.getElementById('days').innerText = daysDifference;
+        }
+    
+        // calculate when loading
+        calculateDays();
+    
+        // update everyday（通过定时器模拟）
+        setInterval(() => {
+            const now = new Date();
+            if (now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
+                calculateDays();
+            }
+        }, 1000); // check everysecond
+    </script>
+
+
+</html>
