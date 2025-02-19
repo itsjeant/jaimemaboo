@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booboo Music</title>
+    
+</head>
+<style>
+            * {
+    box-sizing: border-box;
+}
+ 
+
+ 
+/* 标题 */
+.header {
+    padding: 50px;
+    text-align: center;
+    background: #d082f5;
+    color: white;
+}
+ 
+/* 标题字体加大 */
+.header h1 {
+    font-size: 30px;
+}
+.header p{font-size: medium;
+margin: 0%;}
+.days{font-size: 25px;color: rgb(252, 216, 14);}
+.navbar {
+            background-color: #e6e2e2;
+            overflow: hidden;
+            justify-content: space-between;
+            display: flex;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 5px;
+            padding: 0;
+            
+        }
+
+        .navbar li {
+            float: left;
+            margin: 0;
+        }
+
+        .navbar li a, .navbar .dropbtn {
+            display: inline-block;
+            color: rgb(241, 151, 222);
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover, .navbar .dropdown:hover .dropbtn {
+            background-color: #979595;
+        }
+
+        /* 下拉菜单样式 */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #706e6e;
+            min-width: 160px;
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #a5a3a3;
+        }
+
+        /* 鼠标悬停时显示下拉菜单 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+ 
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+ 
+.background-image {
+  position: relative;
+  width: 100%; /* 根据需要设置宽度 */
+  height: 700px; /* 根据需要设置高度 */
+  background-image: url('home.avif'); /* 替换为你的图片路径 */
+  background-size: cover; /* 让图片覆盖整个容器 */
+  background-position: center; /* 图片居中显示 */
+}
+
+.background-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 设置背景色和透明度 */
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.videos{display: flex;}
+.videos h2{font-size: 12px;}
+
+/* 底部 */
+.footer {
+            background-color: #d082f5;
+        
+            padding: 20px;
+            text-align: center;
+            
+        }
+
+        .social-icons {background-color: #d082f5;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+           
+            padding: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {transform: scale(1.2);
+        }
+        .social-icons p{font-size: x-small;}
+       
+ 
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+ 
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+.header2 h1{font-size: 25px;color: purple;margin-left: 20px;
+    }
+
+.player-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            background-color: rgba(219, 193, 243, 0.7);
+            padding-bottom: 20px;
+        }
+        .player {
+            background-color: #f5f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(25% - 40px);
+            max-width: 300px;
+            padding: 20px;
+            text-align: center;
+        }
+        .player img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .player audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+    .video-container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        cursor: pointer;
+        background-color: rgba(219, 193, 243, 0.7);
+    }
+    .video-thumbnail {
+        width: 90%;
+        border-radius: 10px;
+        transition: opacity 0.3s ease;
+    }
+    .video-container:hover .video-thumbnail {
+        opacity: 0.8;
+        transform: translateY(-5px); /* 微微上移 */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    }
+    .video-container::after {
+        content: "Direct to YouTube";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(133, 5, 253, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .video-container:hover::after {
+        opacity: 1;
+    }
+</style>
+<div class="header">
+    <h1>Welcome to Booboo Planet!</h1>
+
+    <p>
+        We are together for <div class="days" id="days">0</div>days!
+     </p>
+    
+  </div>
+   
+  <nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="album.html">Album</a></li>
+        <li class="dropdown"><a href="">Art</a>
+            
+            <div class="dropdown-content">
+                <a href="music.html">Music🎶</a> <br>
+               <a href="paints.html"> Paints🎨</a>
+            </div>
+        </li>
+        <li class="dropdown"><a href="">Life</a>
+            <div class="dropdown-content">
+                <a href="recipes.html">Recipes🍳</a> <br>
+                <a href="travel.html"> Travel🧳</a><br>
+
+            </div>
+        </li>
+        <li class="dropdown"><a href="">Beauty</a>
+            
+            <div class="dropdown-content">
+                
+                    <a href="skincares.html"> Skincares🧴</a> <br>
+                 <a href="makeups.html"> Makeups💄</a> 
+            </div>
+        </li>
+    </ul>
+</nav>
+<body>
+    <div class="header2">
+    <h1>Guitar cover playlist</h1>
+</div>
+    <!-- 歌曲列表 -->
+    <div id="song-list" class="player-container">
+        <!-- 歌曲将通过JavaScript动态加载 -->
+    </div>
+
+    <script>
+        // 歌曲数据
+        const songs = [
+            { title: "That's So True-Gracie Abrams", src: "thassotrue.m4a",cover:"thatssotrue.jfif"},
+            { title: "Please Please Please", src: "3p.m4a",cover:"3p.jfif" },
+            { title: "BIRDS OF A FEATHER", src: "birds.m4a",cover:"birds.jfif" },
+            { title: "Perfect-One Direction", src: "perfect1d.m4a" ,cover:"perfect 1d.jfif"},
+            { title: "Meant to Be", src: "meanttobe.m4a",cover:"meanttobe.jfif" },
+            { title: "Perfect-Ed Sheeran", src: "perfected.m4a",cover:"perfeed.jfif" },
+            { title: "I want to Write You a Song", src: "iwanna.m4a",cover:"write.jfif" },
+            { title: "Too Sweet", src: "toosweet.mp3",cover:"toosweet.jfif" },
+            { title: "Just the Way you Are", src: "justtheway.mp3" ,cover:"just.jfif"},
+            { title: "I love You So", src: "loveyouso.mp3",cover:"iloveyouso.jfif" },
+            
+            // 可以继续添加更多歌曲
+        ];
+
+        const songListContainer = document.getElementById('song-list');
+        let currentAudio = null; // 用于记录当前正在播放的音频
+
+        // 动态生成播放器
+        songs.forEach(song => {
+            const playerDiv = document.createElement('div');
+            playerDiv.className = 'player';
+
+            const coverImg=document.createElement('img');
+            coverImg.src=song.cover;
+            coverImg.alt=song.title;
+
+            const title = document.createElement('h3');
+            title.textContent = song.title;
+
+            const audio = document.createElement('audio');
+            audio.controls = true;
+
+            const source = document.createElement('source');
+            source.src = song.src;
+            source.type = 'audio/mpeg';
+
+            audio.appendChild(source);
+            playerDiv.appendChild(title);
+            playerDiv.appendChild(coverImg);
+            playerDiv.appendChild(audio);
+            
+            
+            songListContainer.appendChild(playerDiv);
+
+            // 监听播放事件
+            audio.addEventListener('play', () => {
+                if (currentAudio && currentAudio !== audio) {
+                    currentAudio.pause(); // 暂停其他正在播放的音频
+                }
+                currentAudio = audio; // 更新当前播放的音频
+            });
+        });
+       
+    </script>
+</body>
+
+<body>
+    <div class="header2">
+    <h1>Old Cover Videos</h1>
+    </div>
+    <div class="videos">
+        <div class="video-container" onclick="window.open('ttps://www.youtube.com/watch?v=onJ-kCZxRIc', '_blank')">
+            <img src="https://i.ytimg.com/vi/onJ-kCZxRIc/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB3gOAAuADigIMCAAQARhiIGIoYjAP&rs=AOn4CLCBxtFVfq56JRkbwetqprH6QFYFmw" alt="YouTube " class="video-thumbnail">
+            <h2>When I Was Your Man</h2>
+        </div>
+    
+    <div class="video-container" onclick="window.open('https://youtu.be/FkbVHIuzY84?si=mQmF5tPJwk73XjlL', '_blank')">
+        <img src="https://i.ytimg.com/vi/FkbVHIuzY84/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBvgeAAtAFigIMCAAQARhlIE4oQDAP&rs=AOn4CLA-vtXZlDwAb8FWHCctlB0Hk568fQ" alt="YouTube " class="video-thumbnail">
+        <h2>香水−瑛人</h2>
+    </div>
+
+    <div class="video-container" onclick="window.open('https://www.youtube.com/watch?v=Pw4K25bzqIE', '_blank')">
+        <img src="https://i.ytimg.com/vi/Pw4K25bzqIE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCBVFqn8VDShe4r70-9awavxeRytg" alt="YouTube " class="video-thumbnail">
+        <h2>LEMON-米津玄師</h2>
+    </div>
+
+    <div class="video-container" onclick="window.open('https://www.youtube.com/watch?v=-KmbN-sLBPA', '_blank')">
+        <img src="https://i.ytimg.com/vi/-KmbN-sLBPA/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gSAAugCigIMCAAQARhiIGUoRzAP&rs=AOn4CLBtNaydi2j6Ilj-sYG5b3LBXfY5UA" alt="YouTube " class="video-thumbnail">
+        <h2>모든 날, 모든 순간-Paul Kim</h2>
+    </div>
+    
+    <div class="video-container" onclick="window.open('https://www.youtube.com/watch?v=p684jKQanNE', '_blank')">
+        <img src="https://i.ytimg.com/vi/p684jKQanNE/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gSAAuADigIMCAAQARhlIFQoQzAP&rs=AOn4CLC-gnRMeGdarEhznHACWH44Ua8M_w" alt="YouTube " class="video-thumbnail">
+        <h2>猫−DISH//</h2>
+    </div>
+
+    <div class="video-container" onclick="window.open('https://www.youtube.com/watch?v=zhD27mmuYKw', '_blank')">
+        <img src="https://i.ytimg.com/vi/zhD27mmuYKw/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gSAAugCigIMCAAQARhlIGUoRzAP&rs=AOn4CLCD2qtxekAl_WgfHnMEoYlJ-0dMmQ" alt="YouTube " class="video-thumbnail">
+        <h2>カレンダー-川崎鷹也</h2>
+    </div>
+
+    <div class="video-container" onclick="window.open('https://www.youtube.com/watch?v=j0QfDRqc2_c', '_blank')">
+        <img src="https://i.ytimg.com/vi/j0QfDRqc2_c/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gSAAuADigIMCAAQARhgIGUoQzAP&rs=AOn4CLBs9l-wR3shClIGS7w3K6UWV5GXVw" alt="YouTube " class="video-thumbnail">
+        <h2>君の為にキミノウター川崎鷹也</h2>
+    </div>
+</div>
+<footer>
+        
+    <div class="social-icons">
+        <a href="https://instagram.com/ta0j1" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a >
+        <a href="https://www.tiktok.com/@itsjt.eth" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok">
+        </a >
+        <a href="https://www.snapchat.com" target="_blank">
+            <img src="https://ts2.cn.mm.bing.net/th?id=ODLS.477fa196-97d9-45c2-8412-168d6004d333&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+        </a >
+        <a href="https://www.youtube.com/@Jaimemaboo" target="_blank">
+            <img src="https://ts3.cn.mm.bing.net/th?id=ODLS.ad5102f3-b631-4f61-aef2-1489c911c8dd&w=32&h=32&qlt=91&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+        </a >
+        <a href="mailto:itsjt@outlook.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+        </a >
+        
+        <p>Copyright: Booboo family 2023-forever</p>
+    </div>
+    
+</footer>
+    <script>
+        // 你可以在这里动态设置视频ID和封面
+        const videoId = "香水−瑛人"; 
+        const thumbnailUrl = `https://i.ytimg.com/vi/FkbVHIuzY84/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBvgeAAtAFigIMCAAQARhlIE4oQDAP&rs=AOn4CLA-vtXZlDwAb8FWHCctlB0Hk568fQ`;
+        const videoLink = `https://youtu.be/FkbVHIuzY84?si=mQmF5tPJwk73XjlL`;
+  
+        const videoId = "모든 날, 모든 순간-Paul Kim"; 
+        const thumbnailUrl = `https://i.ytimg.com/vi/Pw4K25bzqIE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCBVFqn8VDShe4r70-9awavxeRytg`;
+        const videoLink = `https://www.youtube.com/watch?v=Pw4K25bzqIE`;
+ 
+        const videoId = "LEMON-米津玄師"; 
+        const thumbnailUrl = `https://i.ytimg.com/vi/-KmbN-sLBPA/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gSAAugCigIMCAAQARhiIGUoRzAP&rs=AOn4CLBtNaydi2j6Ilj-sYG5b3LBXfY5UA`;
+        const videoLink = `https://www.youtube.com/watch?v=-KmbN-sLBPA`;
+
+        const videoId = "猫−DISH//"; // 替换为你的YouTube视频ID
+        const thumbnailUrl = `https://i.ytimg.com/vi/p684jKQanNE/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gSAAuADigIMCAAQARhlIFQoQzAP&rs=AOn4CLC-gnRMeGdarEhznHACWH44Ua8M_w`;
+        const videoLink = `https://www.youtube.com/watch?v=p684jKQanNE`;
+
+        const videoId = "カレンダー-川崎鷹也"; // 替换为你的YouTube视频ID
+        const thumbnailUrl = `https://i.ytimg.com/vi/zhD27mmuYKw/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gSAAugCigIMCAAQARhlIGUoRzAP&rs=AOn4CLCD2qtxekAl_WgfHnMEoYlJ-0dMmQ`;
+        const videoLink = `https://www.youtube.com/watch?v=zhD27mmuYKw`;
+
+        const videoId = "君の為にキミノウター川崎鷹也"; // 替换为你的YouTube视频ID
+        const thumbnailUrl = `https://i.ytimg.com/vi/j0QfDRqc2_c/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gSAAuADigIMCAAQARhgIGUoQzAP&rs=AOn4CLBs9l-wR3shClIGS7w3K6UWV5GXVw`;
+        const videoLink = `https://www.youtube.com/watch?v=j0QfDRqc2_c`;
+
+        const videoId = "When I Was Your Man"; // 替换为你的YouTube视频ID
+        const thumbnailUrl = `https://i.ytimg.com/vi/onJ-kCZxRIc/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB3gOAAuADigIMCAAQARhiIGIoYjAP&rs=AOn4CLCBxtFVfq56JRkbwetqprH6QFYFmw`;
+        const videoLink = `ttps://www.youtube.com/watch?v=onJ-kCZxRIc`;
+
+        const videoContainer = document.querySelector('.video-container');
+        const thumbnailImg = document.querySelector('.video-thumbnail');
+
+        thumbnailImg.src = thumbnailUrl;
+        videoContainer.onclick = () => window.open(videoLink, '_blank');
+        // set up anniversary date
+</script>
+
+        <script>       
+const startDate = new Date('2023-04-16'); 
+
+// date difference
+function calculateDays() {
+    const today = new Date();
+    const timeDifference = today - startDate;
+    const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+    // show the days
+    document.getElementById('days').innerText = daysDifference;
+}
+
+// calculate when loading
+calculateDays();
+
+// update everyday（通过定时器模拟）
+setInterval(() => {
+    const now = new Date();
+    if (now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
+        calculateDays();
+    }
+}, 1000); // check everysecond
+    </script> 
+</body>
+<footer>
+        
+    <div class="social-icons">
+        <a href="https://instagram.com/ta0j1" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a >
+        <a href="https://www.tiktok.com/@itsjt.eth" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok">
+        </a >
+        <a href="https://www.snapchat.com" target="_blank">
+            <img src="https://ts2.cn.mm.bing.net/th?id=ODLS.477fa196-97d9-45c2-8412-168d6004d333&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+        </a >
+        <a href="https://www.youtube.com/@Jaimemaboo" target="_blank">
+            <img src="https://ts3.cn.mm.bing.net/th?id=ODLS.ad5102f3-b631-4f61-aef2-1489c911c8dd&w=32&h=32&qlt=91&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+        </a >
+        <a href="mailto:itsjt@outlook.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+        </a >
+        
+        <p>Copyright: Booboo family 2023-forever</p>
+    </div>
+    
+</footer>
+
+</html>

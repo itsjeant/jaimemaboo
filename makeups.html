@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeups</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<div class="header">
+    <h1>Welcome to Booboo Planet!</h1>
+
+    <p>
+        We are together for <div class="days" id="days">0</div>days!
+     </p>
+    
+  </div>
+   
+  <nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="album.html">Album</a></li>
+        <li class="dropdown"><a href="">Art</a>
+            
+            <div class="dropdown-content">
+                <a href="music.html">Music🎶</a> <br>
+               <a href="paints.html"> Paints🎨</a>
+            </div>
+        </li>
+        <li class="dropdown"><a href="">Life</a>
+            <div class="dropdown-content">
+                <a href="recipes.html">Recipes🍳</a> <br>
+                <a href="travel.html"> Travel🧳</a><br>
+
+            </div>
+        </li>
+        <li class="dropdown"><a href="">Beauty</a>
+            
+            <div class="dropdown-content">
+                
+                    <a href="skincares.html"> Skincares🧴</a> <br>
+                 <a href="makeups.html"> Makeups💄</a> 
+            </div>
+        </li>
+    </ul>
+</nav>
+<body>
+    <div class="filters">
+       
+        <label for="category">Type</label>
+    
+        <select id="category">
+            <option value="">All types</option>
+            <option value="Foundations">Foundations</option>
+            <option value="Concealer">Concealer</option>
+            <option value="Powder">Powder</option>
+            <option value="Eyeshadow">Eyeshadow</option>
+            <option value="Perfume">Perfume</option>
+            <option value="Eyeliner">Eyeliner</option>
+            <option value="Mascara">Mascara</option>
+            <option value="Blush">Blush</option>
+            <option value="Bronzer">Blush</option>
+            <option value="Lips">Lips</option>
+            <option value="Brow Gel">Lips</option>
+            <option value="Spray Serum">Spray Serum</option>
+            <option value="Glitter">Glitter stick</option>
+        
+    
+
+        </select>
+    
+        
+        <label for="brand">Brand:</label>
+  
+    
+        <select id="brand">
+            
+            <option value="">All brands</option>
+            <option value="Rare Beauty">Rare Beauty</option>
+            <option value="Fenty Beauty">Fenty Beauty</option>
+            <option value="Chanel">Chanel</option>
+            <option value="Dior">Dior</option>
+            <option value="Givenchy">Givenchy</option>
+            <option value="REM Beauty">REM Beauty</option>
+            <option value="Kosas">Kosas</option>
+            <option value="MILK MAKEUP">MILK MAKEUP</option>
+            <option value="IT Cosmetics">IT Cosmetics</option>
+       
+        </select>
+    
+    </div>
+
+    <div class="products">
+        <!-- 化妆品列表将通过 JavaScript 动态生成 -->
+    </div>
+
+    <div class="pagination">
+        <button id="prevPage">Previous</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextPage">Next</button>
+    </div>
+</body>
+<footer>
+        
+    <div class="social-icons">
+        <a href="https://instagram.com/ta0j1" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a >
+        <a href="https://www.tiktok.com/@itsjt.eth" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok">
+        </a >
+        <a href="https://www.snapchat.com" target="_blank">
+            <img src="https://ts2.cn.mm.bing.net/th?id=ODLS.477fa196-97d9-45c2-8412-168d6004d333&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+        </a >
+        <a href="https://www.youtube.com/@Jaimemaboo" target="_blank">
+            <img src="https://ts3.cn.mm.bing.net/th?id=ODLS.ad5102f3-b631-4f61-aef2-1489c911c8dd&w=32&h=32&qlt=91&pcl=fffffa&o=6&pid=1.2" alt="Snapchat">
+        </a >
+        <a href="mailto:itsjt@outlook.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+        </a >
+        
+        <p>Copyright: Booboo family 2023-forever</p>
+    </div>
+    
+</footer>
+</html>
+
+<style>
+         * {
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: Arial;
+    margin: 0;
+}
+ 
+/* 标题 */
+.header {
+    padding: 50px;
+    text-align: center;
+    background: #d082f5;
+    color: white;
+}
+ 
+/* 标题字体加大 */
+.header h1 {
+    font-size: 30px;
+}
+.header p{font-size: medium;
+margin: 0%;}
+.days{font-size: 25px;color: rgb(252, 216, 14);}
+.navbar {
+            background-color: #e6e2e2;
+            overflow: hidden;
+            justify-content: space-between;
+            display: flex;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 5px;
+            padding: 0;
+            
+        }
+
+        .navbar li {
+            float: left;
+            margin: 0;
+        }
+
+        .navbar li a, .navbar .dropbtn {
+            display: inline-block;
+            color: rgb(241, 151, 222);
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover, .navbar .dropdown:hover .dropbtn {
+            background-color: #979595;
+        }
+
+        /* 下拉菜单样式 */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #706e6e;
+            min-width: 160px;
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #a5a3a3;
+        }
+
+        /* 鼠标悬停时显示下拉菜单 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+ 
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+ 
+ body {
+    font-family: Arial, sans-serif;
+    background-color: plum;
+}
+
+.filters {display: flex;
+    margin: 15px;
+}
+
+.filters label {
+    margin-right: 10px;
+    color: rgb(12, 3, 3);
+}
+.filters option{color: rgb(132, 31, 163);}
+
+.products {
+   
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(230, 202, 212);
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 2%;
+    margin: 10px;
+    padding: 10px;
+    width: 800px;
+    height: 450px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+.product h3{font-size: 17px;
+   }
+.product h4{font-size: 14px;
+margin: 0;}
+.product p{font-size: 13px;
+display: flex;}
+/* 分页按钮样式 */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 10%;
+}
+
+.pagination button:hover {
+    background-color: #d78ff8;
+}
+
+/* 产品框悬停效果 */
+.product {
+    border: 1px solid #b32cf1;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px); /* 微微上移 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+.footer {
+            background-color: #d082f5;
+        
+            padding: 20px;
+            text-align: center;
+            
+        }
+
+        .social-icons {background-color: #d082f5;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+           
+            padding: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icons img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {transform: scale(1.2);
+        }
+        .social-icons p{font-size: x-small;}
+       
+ 
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+ 
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const products = [
+        { name: 'YSL Loveshine Lipstick', category: 'Lips',brand: 'YSL', image: 'https://www.sephora.fr/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw5ec7f5f3/images/hi-res/SKU/SKU_5186/724588_swatch.jpg?sw=585&sh=585&sm=fit',contenance:'150 NUDE LINGERIE',description: 'A nourishing lip gloss that provides a shiny finish and hydration with a smooth texture. It’s available in various shades for a stylish, glossy finish.', officialSite:'https://www.sephora.fr/p/loveshine---batom-efeito-brilho-molhado-724588.html'},
+        { name: 'Space Shape Brow Gel', category: 'Brow Gel', brand: 'REM Beauty', image: 'https://www.sephora.fr/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw349d3b40/images/hi-res/SKU/SKU_3949/653638_swatch.jpg?sw=585&sh=585&sm=fit',contenance:'Point Rouge', description: 'A clear brow gel designed to shape and set brows in place. It provides long-lasting hold and a natural finish.',officialSite:'https://www.sephora.fr/p/space-shape---gel-a-sourcils-653638.html' },
+        { name: 'Prisme Libre Powder', category: 'Powder', brand: 'Givenchy', image: 'https://www.sephora.fr/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw689cb5cf/images/hi-res/SKU/SKU_3057/583746_swatch.jpg?sw=585&sh=585&sm=fit',contenance:'N03 Voile Rose', description: 'A translucent loose powder that blurs imperfections, sets makeup, and gives a radiant finish. It’s perfect for all skin tones with a luminous matte effect.',officialSite:'https://www.sephora.fr/p/prisme-libre---pressed-powder-583746.html' },
+        { name: 'Dior Lip Glow Oil', category: 'Lips', brand: 'Dior', image: 'https://www.sephora.fr/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dwb39554cf/images/hi-res/SKU/SKU_2875/558163_swatch.jpg', description: 'A nourishing lip oil that enhances the natural color of your lips while providing long-lasting moisture and a shiny finish.',officialSite:'https://www.sephora.fr/p/dior-lip-glow-oil---huile-a-levres-brillante-nourrissante-558163.html'},
+        { name: 'At the Borderline Lip Crayon', category: 'Lips', brand: 'REM Beauty', image: 'https://www.sephora.fr/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw1aabe406/images/hi-res/SKU/SKU_3802/653621_swatch.jpg?sw=585&sh=585&sm=fit',contenance:'007 Rasberry', description: 'A lip crayon that defines and shapes the lips with a creamy texture and long-lasting color. Available in several shades to complement various looks.',officialSite:'https://www.sephora.fr/p/at-the-borderline---crayon-a-levres-653621.html' },
+        { name: 'Sun StalkEr Instant Warmth Bronzer', category: 'Bronzer', brand: 'Fenty Beauty', image: 'https://www.sephora.fr/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw921e5c5f/images/hi-res/SKU/SKU_784/469341_swatch.jpg?sw=585&sh=585&sm=fit',contenance:'Point Rouge', description: 'A matte bronzer that gives the skin a natural sun-kissed glow. Its buildable, blendable, and available in multiple shades.',officialSite:'https://www.sephora.fr/p/sun-stalk-r-instant-warmth-bronzer---poudre-bronzante-469341.html' },
+        { name: 'Diamond Bomb All-Over', category: 'Highlighter', brand: 'Fenty Beauty', image: 'https://www.sephora.fr/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw86df7821/images/hi-res/SKU/SKU_6/443947_swatch.jpg?sw=585&sh=585&sm=fit',contenance:'Point Rouge', description: 'A highlighter with a sparkly finish that gives the skin a luminous, multi-dimensional glow. It can be used on the face and body.',officialSite:'https://www.sephora.fr/p/diamond-bomb-all-over-diamond-veil---enlumineur-443947.html' },
+        { name: 'Warm Wishes Effortless Bronzer Stick', category: 'Bronzer', brand: 'Rare Beauty', image: 'https://www.sephora.fr/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dwbb05f0af/images/hi-res/SKU/SKU_2975/577240_swatch.jpg',contenance:'Point Rouge', description: 'A cream bronzer stick that provides a warm, natural-looking bronzed finish. It blends easily and is perfect for a quick, effortless application.',officialSite:'https://www.sephora.fr/p/warm-wishes-effortless-bronzer---poudre-bronzante-577240.html'},
+        { name: 'Hydro Grip Primer - Base De Teint', category: 'Foundation', brand: 'MILK MAKEUP', image: 'https://www.sephora.fr/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw566bbc9b/images/hi-res/SKU/SKU_6100/566101_swatch.jpg',contenance:'Point Rouge', description: ' A refreshing setting spray that locks in makeup and hydrates the skin. It leaves a dewy finish while keeping makeup in place all day.',officialSite:'https://www.sephora.fr/p/hydro-grip-primer---base-teint-hydratante-566101.html#product-info' },
+        { name: 'Soft Pinch - Blush liquide', category: 'Blush', brand: 'Rare Beauty', image: 'https://www.sephora.fr/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dwc6692224/images/hi-res/SKU/SKU_2383/527974_swatch.jpg',contenance:'Happy', description: 'Un blush liquide léger et longue durée qui fusionne parfaitement avec la peau pour lui conférer un effet bonne mine tout en délicatesse. Disponible en finition mate ou nacrée.',officialSite:'https://www.sephora.fr/p/soft-pinch---liquid-blush-527974.html#product-info' },
+        { name: 'Palette Regard Belle Mine Naturelle', category: 'Eyeshadow', brand: 'Chanel', image: 'https://www.sephora.fr/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw39d72e3a/images/hi-res/SKU/SKU_4185/388963_swatch.jpg',contenance:'Warm', description: 'Une palette de 5 couleurs naturelles, faciles à porter et à associer au gré des envies, pour créer de nombreux looks, du plus naturel au plus intense. ',officialSite:'https://www.sephora.fr/p/les-beiges---palette-regard-belle-mine-naturelle-388963.html#product-info' },
+        { name: 'Soft Pinch Powder Blush - Blush poudre', category: 'Blush', brand: 'Rare Beauty', image: 'https://www.sephora.fr/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dwe6c5211d/images/hi-res/SKU/SKU_5273/718879_swatch.jpg', contenance:'Happy',description: 'Un blush éclatant qui illumine toutes les carnations en apportant une touche de couleur aérienne, naturelle et soyeuse pour afficher un teint toujours rayonnant.',officialSite:'https://www.sephora.fr/p/soft-pinch-luminous-powder-blush---blush-poudre-718879.html#product-info' },
+        { name: 'bye bye under eye', category: 'Concealer', brand: 'IT Cosmetics', image: 'https://media.iciparisxl.be/medias/prd-front-1050739-954x1192.jpg?context=bWFzdGVyfHByZC1pbWFnZXN8MjE5MjE5fGltYWdlL2pwZWd8YUdJNEwyZ3pNeTg1TlRjd01EYzFNVEUxTlRVd0wzQnlaQzFtY205dWRDMHhNRFV3TnpNNVh6azFOSGd4TVRreUxtcHdad3wyNGVlYTFkY2U0Y2I0YjU4NzU4NGYzYjU0NWFhZWNlNDM0ZmMzNjE3MWY4NzBmMDYzZjM2YWUyZjliMDIwNDQ5', contenance:'13 Light Natural',description: 'e correcteur primé offre une haute couvrance, une longue tenue et ne marque pas les plis !',officialSite:'https://www.iciparisxl.be/fr/it-cosmetics/bye-bye-under-eye/concealer/p/BP_1050739?varSel=1050739' },
+        { name:'BB Burst',category:'Foundation',brand:'Kosas',image:'https://kosas.com/cdn/shop/files/KOSAS-BB-BURST-10.jpg?v=1705602543&width=900',contenance:'Lgiht cool 13',description:'A clean, tinted gel cream that’s a fresh take on tinted moisturizer—it delivers a refreshing burst of active skincare, light buildable coverage, and a smooth, hydrated, natural finish.',officialSite:'https://kosas.com/products/bb-burst?_pos=5&_sid=0fba5828c&_ss=r'},
+        { name:'Revealer Concealer',category:'Concealer',brand:'Kosas',image:'https://cdn.shopify.com/s/files/1/0131/5409/1065/files/RC2024_01_vessel_60940614-7bab-49a0-a803-1019be890163.jpg?v=1704343599&width=900',contenance:'2.6C',description:'A super creamy, skincare-packed clean concealer with medium coverage and a fresh, hydrated, radiant finish. Non-comedogenic. Safe for sensitive skin.',officialSite:'https://kosas.com/products/revealer-concealer?_pos=2&_sid=0627fd2f8&_ss=r&variant=32907927781433'},
+        { name:'Air Brow - Clear',category:'Brow Gel;',brand:'Kosas',image:'https://cdn.shopify.com/s/files/1/0131/5409/1065/products/Air_Brow_Clear_0035.jpg?v=1617079245&width=900',contenance:'Clear',description:'A clean, clear brow gel boosted by hair care actives that fluffs, lifts and sets brows in place, while helping brows reach their full growth potential.',officialSite:'https://kosas.com/products/air-brow-clear?_pos=2&_sid=3031df251&_ss=r'},
+        { name:'Cloud Set Setting Powder',category:'Powder',brand:'Kosas',image:'https://cdn.shopify.com/s/files/1/0131/5409/1065/files/CLOUDSET_AIRY.jpg?v=1716313618&width=900',contenance:'Breezy',description:'A super soft, sheer setting & smoothing powder baked with skincare actives that sweeps away shine (not glow) & feels like nothing (but looks like everything).',officialSite:'https://kosas.com/products/cloud-set?_pos=1&_sid=02b7e3175&_ss=r'},
+        { name:'Wet Stick',category:'Lips',brand:'Kosas',image:'https://cdn.shopify.com/s/files/1/0131/5409/1065/files/PDP-WetStick-Skinny-Dip.png?v=1697833595&width=900',contenance:'Malibu',description:'A clean, balmy lip care stick packed with squalane + ceramides that melts onto lips for a sheer wash of color and a touch of soft, kissable shine.',officialSite:'https://kosas.com/products/wet-stick?_pos=1&_sid=25de9650b&_ss=r'},
+        { name:'Plump + Juicy Vegan Collagen Spray-On Serum',category:'Spray Serum',brand:'Kosas',image:'https://cdn.shopify.com/s/files/1/0131/5409/1065/products/PJ-SPRAY-PDP_01.jpg?v=1663174638&width=900',contenance:'None',description:'Spray-on vegan collagen + probiotic serum that fast tracks clean, active ingredients into skin to hydrate, soothe, and visibly firm—for your healthiest-looking skin.',officialSite:'https://kosas.com/products/plump-juicy-vegan-collagen-spray-on-serum?_pos=1&_sid=28875048a&_ss=r'},
+        { name:'HEROINE MAKE by KISSME Long & Curl Up Waterproof Mascara',category:'Mascara',brand:'Isehan',image:'https://m.media-amazon.com/images/I/71V--DCt9tL._SY355_.jpg',contenance:'Black',description:'Super Lengthening Fiber: 5mm Long EX Fiber easily entangles to lashes and lengthens eyelashes every coating and creates beautiful separated lashes.',officialSite:'HEROINE MAKE by KISSME Long & Curl Up Waterproof Mascara'},
+
+    ];
+
+    const categoryFilter = document.getElementById('category');
+    const brandFilter = document.getElementById('brand');
+    const productsContainer = document.querySelector('.products');
+    const prevPageButton = document.getElementById('prevPage');
+    const nextPageButton = document.getElementById('nextPage');
+    const pageInfo = document.getElementById('pageInfo');
+    const productImage = document.createElement('img');
+    
+    let currentPage = 1;
+    const productsPerPage = 12;
+
+    // 渲染产品列表
+    function renderProducts() {
+        const selectedCategory = categoryFilter.value;
+        const selectedBrand = brandFilter.value;
+
+        const filteredProducts = products.filter(product => {
+            return (selectedCategory === '' || product.category === selectedCategory) &&
+                   (selectedBrand === '' || product.brand === selectedBrand);
+        });
+
+        // 计算当前页的产品
+        const startIndex = (currentPage - 1) * productsPerPage;
+        const endIndex = startIndex + productsPerPage;
+        const productsToShow = filteredProducts.slice(startIndex, endIndex);
+
+        // 清空容器并渲染产品
+        productsContainer.innerHTML = '';
+        productsToShow.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.className = 'product';
+            productElement.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <h4>${product.contenance}</h4>
+                <p>${product.description}</p>
+                <a href="${product.officialSite}" target="_blank">Direct to official site</a>
+            `;
+            productsContainer.appendChild(productElement);
+        });
+
+        // 更新分页信息
+        pageInfo.textContent = `Page ${currentPage}  /  ${Math.ceil(filteredProducts.length / productsPerPage)} Pages`;
+        prevPageButton.disabled = currentPage === 1;
+        nextPageButton.disabled = endIndex >= filteredProducts.length;
+    }
+
+    // 上一页
+    prevPageButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderProducts();
+        }
+    });
+
+    // 下一页
+    nextPageButton.addEventListener('click', () => {
+        const selectedCategory = categoryFilter.value;
+        const selectedBrand = brandFilter.value;
+        const filteredProducts = products.filter(product => {
+            return (selectedCategory === '' || product.category === selectedCategory) &&
+                   (selectedBrand === '' || product.brand === selectedBrand);
+        });
+        if (currentPage < Math.ceil(filteredProducts.length / productsPerPage)) {
+            currentPage++;
+            renderProducts();
+        }
+    });
+
+    // 筛选器变化时重置到第一页
+    categoryFilter.addEventListener('change', () => {
+        currentPage = 1;
+        renderProducts();
+    });
+    brandFilter.addEventListener('change', () => {
+        currentPage = 1;
+        renderProducts();
+    });
+
+    //初始渲染
+    renderProducts();
+});
+        // set up anniversary date
+        const startDate = new Date('2023-04-16'); 
+    
+        // date difference
+        function calculateDays() {
+            const today = new Date();
+            const timeDifference = today - startDate;
+            const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    
+            // show the days
+            document.getElementById('days').innerText = daysDifference;
+        }
+    
+        // calculate when loading
+        calculateDays();
+    
+        // update everyday（通过定时器模拟）
+        setInterval(() => {
+            const now = new Date();
+            if (now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) {
+                calculateDays();
+            }
+        }, 1000); // check everysecond
+</script>
